@@ -1,7 +1,9 @@
 <?php
 
-echo json_encode('Post');
+class PostController {
 
+  
 
+}
 
- ?>
+?>

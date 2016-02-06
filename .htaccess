@@ -1,0 +1,5 @@
+DirectoryIndex public/index.php
+RewriteEngine On
+RewriteRule login public/index.php?action=login [L]
+RewriteRule user/disconnect public/index.php?controller=User&action=disconnect
+RewriteRule user/connect public/index.php?controller=User&action=connect
