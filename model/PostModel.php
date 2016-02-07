@@ -13,10 +13,11 @@ class PostModel{
 
     public function GetPost($id){
         global $pdo;
-        $database = $pdo->prepare("SELECT id FROM `posts`
+        $database = $pdo->prepare("SELECT * FROM `posts`
                           WHERE `id` = :id");
         $database->bindParam("id",$id);
         $database->execute();
+        return $database->fetch();
     }
 
     public function UpdatePost($title, $content, $user_related_id){
@@ -36,4 +37,13 @@ class PostModel{
         $database->bindParam("id",$id);
         $database->execute();
     }
+
+    public function GetAllPosts() {
+      global $pdo;
+      $database = $pdo->prepare("SELECT * FROM `posts`");
+      $database->execute();
+      return $database;
+
+    }
+
 }

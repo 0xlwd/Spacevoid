@@ -5,7 +5,7 @@
     <title>Login</title>
   </head>
   <body>
-    <form action="user/connect" method="post">
+    <form action="/user/connect" method="post">
       <input type="text" name="login" placeholder="Login">
       <input type="password" name="password" placeholder="Password">
       <input type="submit" value="Connexion">

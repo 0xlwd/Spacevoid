@@ -2,33 +2,57 @@
 
 class Routes {
 
-  static function getController($controller, $action) {
+  public function getController($controller, $action, $id) {
 
     $controllerFolder = '../controller/';
-    $controllerPath = $controllerFolder . $class . 'Controller.php';
 
-    if(file_exists($controllerPath)){
+    if ($controller == 'Post') {
 
-      require $controllerPath;
+      if(isset($id) && $action == 'read') {
+
+        require $controllerFolder . 'PostController.php';
+        $PostController = new PostController();
+        $PostController->readPost($id);
+
+      }
+
+      if($action == 'home') {
+
+        require $controllerFolder . 'PostController.php';
+        $PostController = new PostController();
+        $PostController->home();
+
+      } elseif (isset($id) && $action == 'edit'){
+        require $controllerFolder . 'PostController.php';
+        $PostController = new PostController();
+        $PostController->edit($id);
+      }
 
     } elseif ($controller == 'Page') {
 
       require $controllerFolder . 'PageController.php';
-
-      PageController::getPage($action);
+      $PagesController = new PageController();
+      $PagesController->getPage($action);
 
     } elseif ($controller == 'User') {
 
       if($action == 'connect') {
 
         require $controllerFolder . 'UserController.php';
+        $UserController = new UserController();
+        $UserController->userConnect($_POST['login'], $_POST['password']);
 
-        UserController::userConnect($_POST['login'], $_POST['password']);
-
-      } elseif ($action == 'disconnect') {
+      } elseif ($action == 'disconnect'){
 
         require $controllerFolder . 'UserController.php';
-        UserController::userDisconnect();
+        $UserController = new UserController();
+        $UserController->userDisconnect();
+
+      } elseif ($action == 'profile'){
+
+        require $controllerFolder .'UserController.php';
+        $UserController = new UserController();
+        $UserController->userProfile();
 
       }
 

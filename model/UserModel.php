@@ -19,10 +19,11 @@ class UserModel{
 
     public function GetUser($id){
         global $pdo;
-        $database = $pdo->prepare("SELECT id FROM user
+        $database = $pdo->prepare("SELECT * FROM user
                           WHERE `id` = :id");
         $database->bindParam("id",$id);
         $database->execute();
+        return $database->fetch();
     }
 
     public function UpdateUser($login, $password, $mail, $description, $firstname, $lastname, $role){
@@ -45,5 +46,23 @@ class UserModel{
                           WHERE `id` = :id");
         $database->bindParam("id",$id);
         $database->execute();
+    }
+
+    public function GetUserConnect($login, $password){
+        global $pdo;
+        $database = $pdo->prepare("SELECT * FROM user
+                          WHERE `login` = :login AND `password` = :password");
+        $database->bindParam("login",$login);
+        $database->bindParam("password",$password);
+        $database->execute();
+        return $database;
+    }
+
+    public function UserConnectDate($date, $id){
+      global $pdo;
+      $database = $pdo->prepare("UPDATE `user` SET `last_login` = :last_login WHERE `id` = :id");
+      $database->bindParam("last_login",$date);
+      $database->bindParam("id",$id);
+      $database->execute();
     }
 }

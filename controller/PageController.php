@@ -2,7 +2,7 @@
 
 class PageController {
 
-  static function getPage($pageName) {
+  public function getPage($pageName) {
 
     require '../view/'.$pageName.'.php';
 
