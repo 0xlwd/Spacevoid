@@ -9,7 +9,7 @@
     <p>
       Bienvenue sur votre profil <?=$data['name']?> <br>
 
-      Votre mot de passe est : <?=$data['password']?>
+      Votre mot de passe est : <?= App::PasswordHash($data['password'])?>
 
       <a href="/user/disconnect">Se déconnecter</a>
     </p>
