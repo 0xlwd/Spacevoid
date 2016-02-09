@@ -8,24 +8,29 @@ class Routes {
 
     if ($controller == 'Post') {
 
+      require $controllerFolder . 'PostController.php';
+      $PostController = new PostController();
+
       if(isset($id) && $action == 'read') {
 
-        require $controllerFolder . 'PostController.php';
-        $PostController = new PostController();
-        $PostController->readPost($id);
+        $PostController->ReadPost($id);
 
-      }
+      } elseif($action == 'home') {
 
-      if($action == 'home') {
-
-        require $controllerFolder . 'PostController.php';
-        $PostController = new PostController();
-        $PostController->home();
+        $PostController->Index();
 
       } elseif (isset($id) && $action == 'edit'){
-        require $controllerFolder . 'PostController.php';
-        $PostController = new PostController();
-        $PostController->edit($id);
+
+        $PostController->EditPost($id);
+
+      } elseif ($action == 'new') {
+
+        $PostController->NewPost();
+
+      } elseif ($action == 'delete') {
+
+        $PostController->Delete($id);
+
       }
 
     } elseif ($controller == 'Page') {
@@ -36,23 +41,24 @@ class Routes {
 
     } elseif ($controller == 'User') {
 
+      require $controllerFolder . 'UserController.php';
+      $UserController = new UserController();
+
       if($action == 'connect') {
 
-        require $controllerFolder . 'UserController.php';
-        $UserController = new UserController();
         $UserController->userConnect($_POST['login'], $_POST['password']);
 
       } elseif ($action == 'disconnect'){
 
-        require $controllerFolder . 'UserController.php';
-        $UserController = new UserController();
         $UserController->userDisconnect();
 
       } elseif ($action == 'profile'){
 
-        require $controllerFolder .'UserController.php';
-        $UserController = new UserController();
         $UserController->userProfile();
+
+      } elseif ($action == 'login'){
+
+        $UserController->userLoginForm();
 
       }
 

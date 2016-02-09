@@ -40,8 +40,7 @@ class PostModel{
 
     public function GetAllPosts() {
       global $pdo;
-      $database = $pdo->prepare("SELECT * FROM `posts`");
-      $database->execute();
+      $database = $pdo->query("SELECT * FROM `posts`");
       return $database;
 
     }

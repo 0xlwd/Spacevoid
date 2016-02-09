@@ -19,6 +19,10 @@ class ErrorController {
         http_response_code(404);
         return 'Error 404 Not found : The page you are looking for was not found.';
       }
+      if ($errorCode == 'permission') {
+        http_response_code(403);
+        return 'Permission error : You don\'t have the required rank to access this page';
+      }
   }
 
 }

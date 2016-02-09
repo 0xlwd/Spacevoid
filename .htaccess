@@ -1,5 +1,9 @@
 DirectoryIndex public/index.php
 RewriteEngine On
-RewriteRule login public/index.php?action=login [L]
+RewriteRule login public/index.php?controller=User&action=login
 RewriteRule user/disconnect public/index.php?controller=User&action=disconnect
 RewriteRule user/connect public/index.php?controller=User&action=connect
+RewriteRule profile public/index.php?controller=User&action=profile
+RewriteRule ^post/edit/([0-9]+)(/?)$ public/index.php?controller=Post&action=edit&id=$1
+RewriteRule ^post/([0-9]+)(/?)$ public/index.php?controller=Post&action=read&id=$1
+RewriteRule post/([a-zA-Z]+)(/?)$ public/index.php?controller=Post&action=$1

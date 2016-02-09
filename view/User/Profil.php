@@ -7,8 +7,10 @@
   <body>
     <h1>Profil</h1>
     <p>
-      Bienvenue sur votre profil.
-      <?= $userinfos['login'] ?>
+      Bienvenue sur votre profil <?=$data['name']?> <br>
+
+      Votre mot de passe est : <?=$data['password']?>
+
       <a href="/user/disconnect">Se déconnecter</a>
     </p>
   </body>
