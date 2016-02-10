@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title><?= $data['title'] ?></title>
   </head>
   <body>
     <form action="/user/connect" method="post">
