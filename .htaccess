@@ -1,9 +1,15 @@
 DirectoryIndex public/index.php
 RewriteEngine On
 RewriteRule login public/index.php?controller=User&action=login
+RewriteRule register public/index.php?controller=User&action=register
 RewriteRule user/disconnect public/index.php?controller=User&action=disconnect
 RewriteRule user/connect public/index.php?controller=User&action=connect
+RewriteRule user/delete/([0-9]+)(/?)$ public/index.php?controller=User&action=delete&id=$1
 RewriteRule profile public/index.php?controller=User&action=profile
 RewriteRule ^post/edit/([0-9]+)(/?)$ public/index.php?controller=Post&action=edit&id=$1
 RewriteRule ^post/([0-9]+)(/?)$ public/index.php?controller=Post&action=read&id=$1
-RewriteRule post/([a-zA-Z]+)(/?)$ public/index.php?controller=Post&action=$1
+RewriteRule ^post/([a-zA-Z]+)(/?)$ public/index.php?controller=Post&action=$1
+RewriteRule ^post/delete/([0-9]+)(/?)$ public/index.php?controller=Post&action=delete&id=$1
+RewriteRule post/comment public/index.php?controller=Post&action=comment
+RewriteRule post/deletecomment/([0-9]+)(/?)$ public/index.php?controller=Post&action=commentDelete&id=$1
+RewriteRule dashboard public/index.php?controller=Admin&action=index

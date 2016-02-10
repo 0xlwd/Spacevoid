@@ -1,12 +1,12 @@
 <?php
 require_once("DataBase/config.php");
 class UserModel{
-    public function CreateUser($login, $password, $mail, $description, $firstname, $lastname, $role){
+    public function CreateUser($login, $password, $mail, $description, $firstname, $lastname, $role, $signup_date){
         global $pdo;
         $database = $pdo->prepare("INSERT INTO `user`(`login`, `password`, `mail`,
-                          `description`, `firstname`, `lastname`, `role`)
+                          `description`, `firstname`, `lastname`, `role`, `signup_date`)
                           VALUES (:login,:password,:mail,:description,:firstname,
-                          :lastname,:role)");
+                          :lastname,:role, :signup_date)");
         $database->bindParam("login",$login);
         $database->bindParam("password",$password);
         $database->bindParam("mail",$mail);
@@ -14,6 +14,7 @@ class UserModel{
         $database->bindParam("firstname",$firstname);
         $database->bindParam("lastname",$lastname);
         $database->bindParam("role",$role);
+        $database->bindParam("signup_date",$signup_date);
         $database->execute();
     }
 
@@ -26,26 +27,33 @@ class UserModel{
         return $database->fetch();
     }
 
-    public function UpdateUser($login, $password, $mail, $description, $firstname, $lastname, $role){
+    public function UpdateUser($id, $login, $password, $mail, $description, $firstname, $lastname){
         global $pdo;
         $database = $pdo->prepare("UPDATE `user` SET `login`= :login,`password`= :password,`mail`= :mail,`description`= :description,
-                          `firstname`= :firstname,`lastname`= :lastname,`role`= :role");
+                          `firstname`= :firstname,`lastname`= :lastname WHERE `id` = :id");
         $database->bindParam("login",$login);
         $database->bindParam("password",$password);
         $database->bindParam("mail",$mail);
         $database->bindParam("description",$description);
         $database->bindParam("firstname",$firstname);
         $database->bindParam("lastname",$lastname);
-        $database->bindParam("role",$role);
+        $database->bindParam("id", $id);
+        var_dump($database);
         $database->execute();
     }
 
     public function DeleteUser($id){
         global $pdo;
-        $database = $pdo->prepare("DELETE * FROM user
+        $database = $pdo->prepare("DELETE FROM user
                           WHERE `id` = :id");
         $database->bindParam("id",$id);
         $database->execute();
+    }
+
+    public function GetAllUsers(){
+      global $pdo;
+      $database = $pdo->query("SELECT * FROM user");
+      return $database;
     }
 
     public function GetUserConnect($login, $password){
