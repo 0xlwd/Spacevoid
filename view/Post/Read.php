@@ -3,8 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title><?= $data['title'] . $data['posts']['title'] ?></title>
+    <link href=<? App::css("StylePost");?>>
   </head>
   <body>
+  <div class="header">
+
+  </div>
+  <div class="sidebar">
+
+  </div>
+  <div class="container">
     <div class="post">
       <img src="<?= App::img($data['posts']['post_cover']); ?>" alt="<?= $data['posts']['title'] ?>" />
       <h1><?= $data['posts']['title'] ?></h1>
@@ -29,6 +37,9 @@
         Veuillez vous connecter pour poster un commentaire <a href="../../login">Connexion</a>
       </p>
     <?php } ?>
-
+  </div>
+  <div class="footer">
+    &copy;<?= date('Y'); ?>
+  </div>
   </body>
 </html>

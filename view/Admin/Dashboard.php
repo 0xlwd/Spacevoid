@@ -3,8 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href=<? App::css("StyleDashboard");?>>
   </head>
   <body>
+  <div class="header">
+
+  </div>
+  <div class="sidebar">
+
+  </div>
+  <div class="container">
     <h1>Dashboard</h1>
     <h2>Liste des articles</h2>
     <div class="posts">
@@ -29,5 +37,9 @@
         <a href="../../post/deletecomment/<?= $comment['id'] ?>">Supprimer</a><br>
       <?php } ?>
     </div>
+  </div>
+  <div class="footer">
+    &copy;<?= date('Y'); ?>
+  </div>
   </body>
 </html>

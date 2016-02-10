@@ -3,8 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title><?= $data['title'] ?></title>
+    <link href=<? App::css("StyleUser");?>>
   </head>
   <body>
+  <div class="header">
+
+  </div>
+  <div class="sidebar">
+
+  </div>
+  <div class="container">
     <h1>Profil</h1>
       Bienvenue sur votre profil <?=$data['user']['firstname']?> <br>
       Vous avez le rang de : <?=$data['user']['role'] ?><br>
@@ -43,5 +51,9 @@
         <input type="submit" name="name" value="Enregistrer">
       </form>
       <a href="/user/disconnect">Se déconnecter</a>
+  </div>
+  <div class="footer">
+    &copy;<?= date('Y'); ?>
+  </div>
   </body>
 </html>
