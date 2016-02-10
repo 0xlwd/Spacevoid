@@ -31,13 +31,15 @@ class Routes {
 
         $PostController->Delete($id);
 
+      } elseif ($action == 'comment') {
+
+        $PostController->NewComment();
+
+      } elseif ($action == 'commentDelete'){
+
+        $PostController->DeleteComment($id);
+
       }
-
-    } elseif ($controller == 'Page') {
-
-      require $controllerFolder . 'PageController.php';
-      $PagesController = new PageController();
-      $PagesController->getPage($action);
 
     } elseif ($controller == 'User') {
 
@@ -60,14 +62,29 @@ class Routes {
 
         $UserController->userLoginForm();
 
+      } elseif ($action == 'register'){
+
+        $UserController->userRegister();
+
+      } elseif ($action == 'delete'){
+
+        $UserController->DeleteUser($id);
+
       }
 
+    } elseif ($controller == 'Admin') {
+      require $controllerFolder . 'AdminController.php';
+      $AdminController = new AdminController();
+      if($action == 'index'){
+
+        $AdminController->index();
+
+      }
     }
 
     else {
 
-      require $controllerFolder . 'ErrorController.php';
-      echo ErrorController::getError(404);
+      echo App::Error(404);
 
     }
 
