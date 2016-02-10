@@ -1,12 +1,18 @@
 <?php
 require_once '../model/PostModel.php';
+require_once '../model/CommentModel.php';
+require_once '../model/UserModel.php';
+require_once 'UserController.php';
 class PostController {
 
   public function Index(){
 
     $posts = new PostModel();
     $post = $posts->GetAllPosts();
-    App::view('post', 'index', $post);
+    App::view('post', 'index', [
+      'title' => 'SpaceVoid - Espace et Science',
+      'posts' => $post
+    ]);
 
   }
 
@@ -14,15 +20,69 @@ class PostController {
 
     $posts = new PostModel();
     $post = $posts->GetPost($postID);
-    App::view('post', 'read', $post);
+    $comment = new CommentModel();
+    $comments = $comment->GetAllCommentsFromPost($post['id']);
+    $user = new UserModel();
+    $author = $user->GetUser($post['user_related_id']);
+    if(!isset($_SESSION['user_id'])){
+      $currentUserId = NULL;
+    } else {
+      $currentUserId = $_SESSION['user_id'];
+    }
+    App::view('post', 'read', [
+      'title' => 'SpaceVoid - ',
+      'posts' => $post,
+      'author' => $author,
+      'comments' => $comments,
+      'connected' => UserController::isUserConnected(),
+      'current_user' => $currentUserId
+    ]);
 
   }
 
   public function EditPost($postID) {
 
-    $posts = new PostModel();
-    $post = $posts->GetPost($postID);
-    App::view('post', 'edit', $post);
+    require_once '../Controller/UserController.php';
+    $role = UserController::getUserPermission();
+    if(UserController::isUserConnected()){
+      if(isset($role) && $role == 'blogger' || $role == 'superadmin'){
+          $posts = new PostModel();
+          $post = $posts->GetPost($postID);
+          if($_SESSION['user_id'] == $post['user_related_id'] || $role == 'superadmin'){
+            if(isset($_POST['title']) && isset($_POST['content'])){
+              if(is_uploaded_file($_FILES['post_cover']['tmp_name'])) {
+                $coverImage = App::SaveImage();
+                $posts->UpdatePost($post['id'], $_POST['title'], $_POST['content'], $coverImage);
+              } else {
+                $coverImage = $post['post_cover'];
+                $posts->UpdatePost($post['id'], $_POST['title'], $_POST['content'], $coverImage);
+              }
+
+            }
+
+            App::view('post', 'edit', [
+              'title' => 'SpaceVoid - Edition article : '.$postID,
+              'posts' => $post
+            ]);
+
+          } else {
+
+            echo App::Error('property');
+
+          }
+
+
+      } else {
+
+        echo App::Error('permission');
+
+      }
+
+    } else {
+
+      echo App::Error(401);
+
+    }
 
   }
 
@@ -33,50 +93,29 @@ class PostController {
     if(UserController::isUserConnected()){
       if(isset($role) && $role == 'blogger' || $role == 'superadmin'){
 
-        if(isset($_POST['title']) && isset($_POST['content']) && isset($_POST['post_cover'])){
+        if(isset($_POST['title']) && isset($_POST['content']) && isset($_FILES['post_cover'])){
 
-            $content_dir = '../public/img/';
+          $coverImage = App::SaveImage();
+          $posts = new PostModel();
+          $posts->CreatePost($_POST['title'], $_POST['content'], $_SESSION['user_id'], $coverImage);
 
-            $tmp_file = $_FILES['fichier']['tmp_name'];
+        } else {
 
-            if( !is_uploaded_file($tmp_file) )
-            {
-                exit("Le fichier est introuvable");
-            }
-
-            $type_file = $_FILES['fichier']['type'];
-
-            if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif') )
-            {
-                exit("Le fichier n'est pas une image");
-            }
-
-            $name_file = $_FILES['fichier']['name'];
-
-            if( !move_uploaded_file($tmp_file, $content_dir . $name_file) )
-            {
-                exit("Impossible de copier le fichier dans $content_dir");
-            }
-
-            echo "Le fichier a bien été uploadé";
-        }
-
+          App::view('post', 'new', [
+            'title' => 'SpaceVoid - Nouvel article'
+          ]);
 
         }
-
-        App::view('post', 'new', NULL);
 
       } else {
 
-        require '../Controller/ErrorController.php';
-        echo ErrorController::getError('permission');
+        echo App::Error('permission');
 
       }
 
     } else {
 
-      require '../Controller/ErrorController.php';
-      echo ErrorController::getError(401);
+      echo App::Error(401);
 
     }
 
@@ -87,6 +126,24 @@ class PostController {
 
     $posts = new PostModel();
     $post = $posts->DeletePost($postID);
+
+  }
+
+  public function NewComment(){
+
+    $comments = new CommentModel();
+    if(!empty($_POST['content']) && !empty($_POST['post_id']) && !empty($_POST['user_id'])){
+      $comment = $comments->CreateComment($_POST['content'], $_POST['post_id'], $_POST['user_id']);
+    } else {
+      echo App::Error(400);
+    }
+
+  }
+
+  public function DeleteComment($id){
+
+    $comment = new CommentModel();
+    $comments = $comment->DeleteComment($id);
 
   }
 
