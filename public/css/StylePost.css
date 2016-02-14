@@ -1,19 +1,109 @@
-body{
-    background: #00002C; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#000051, #00007F); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#000051, #00007F); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#000051, #00007F); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#000051, #00007F); /* Standard syntax */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Regular.otf');
 }
 
-.container{
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    height: 400px;
+    background-color: #2c3e50;
+}
+
+.headerbtn{
+    display: inline-block;
+    color: white;
+    font-family: 'Montserrat';
+    float: right;
+    margin: 15px 20px 0 10px;
+    text-decoration: none;
+    border: solid white 2px;
+    padding: 7px 25px 7px 25px;
+}
+
+.headerbtn:hover{
+    color: #2c3e50;
+    background-color: white;
+    transition: 1s ease;
+}
+
+.divbtn{
+    height: 75px;
+}
+
+.logospace{
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.post{
     margin-right: auto;
     margin-left: auto;
-    margin-top: 10%;
     width: 945px;
+    text-align: center;
+    padding: 1.4rem 0 1rem 0;
+    font-family: 'Montserrat';
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.post:first-of-type {
+    margin-top: -40px;
+    background-color: white;
+}
+
+.post:not(:first-of-type) {
+    margin-top: 40px;
+}
+
+.contentpost{
+    padding: 10px 50px 20px 50px;
+    width: 89%;
+}
+
+.readpostbtn{
+    margin: auto;
+    color: #2c3e50;
+    border: solid #2c3e50 2px;
+    text-decoration: none;
+    padding: 7px 40px 7px 40px;
+}
+
+.readpostbtn:hover{
+    color: white;
+    background-color: #2c3e50;
+    transition: 1s ease;
+}
+
+.titlepost{
+    padding: 10px 30px 0 45px;
+    width: 89%;
+}
+
+.postlinks{
+    text-decoration: none;
+    color: #404040;
+}
+
+.postlinks:hover{
+    color: #000051;
+    transition: .5s ease;
 }
 
 .footer{
+    background-color: #2c3e50;
     text-align: center;
-    height: 50px;
+    font-family: 'Montserrat';
+    color: white;
+    margin-top: 100px;
+    line-height: 100px;
+    height: 100px;
+    padding: 20px;
 }

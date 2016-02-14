@@ -3,7 +3,7 @@ require_once("DataBase/config.php");
 class PostModel{
     public function CreatePost($title, $content, $user_related_id, $post_cover){
         global $pdo;
-        $post_date = date('d.m.Y');
+        $post_date = date('d/m/Y');
         $database = $pdo->prepare("INSERT INTO `posts`(`title`, `content`, `user_related_id`, `post_cover`, `post_date`)
                           VALUES (:title,:content,:user_related_id, :post_cover, :post_date)");
         $database->bindParam("title",$title);

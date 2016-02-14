@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><?= $data['title'] ?></title>
-    <link href=<? App::css("StylePost");?>>
+    <link href="<?= App::css("StylePost");?>" rel="stylesheet">
   </head>
   <body>
   <div class="header">

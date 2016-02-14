@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link href=<? App::css("StyleDashboard");?>>
+    <link href="<?php App::css("StyleDashboard");?>" rel="stylesheet">
   </head>
   <body>
   <div class="header">

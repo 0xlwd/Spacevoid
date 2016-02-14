@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><?= $data['title'] . $data['posts']['title'] ?></title>
-    <link href=<? App::css("StylePost");?>>
+    <link href="<?= App::css("StylePost");?>" rel="stylesheet">
   </head>
   <body>
   <div class="header">
@@ -39,7 +39,7 @@
     <?php } ?>
   </div>
   <div class="footer">
-    &copy;<?= date('Y'); ?>
+    SpaceVoid &copy; <?= date('Y'); ?>
   </div>
   </body>
 </html>
