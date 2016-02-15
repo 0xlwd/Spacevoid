@@ -63,6 +63,28 @@ body{
     transition: 1s ease;
 }
 
+.disconnectbtn{
+    display: inline-block;
+    width: 15%;
+    color: #E51616;
+    background-color: white;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    padding: 7px 25px 7px 25px;
+    border: solid #E51616 2px;
+}
+
+.disconnectbtn:hover{
+    color: white;
+    background-color: #E51616;
+    transition: 1s ease;
+}
+
+.disconnectdiv{
+    display: inline-block;
+    width: 100%;
+}
+
 .divbtn{
     height: 50px;
 }
@@ -76,11 +98,67 @@ input{
     margin-top: 5%;
 }
 
+.container ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .title{
     margin-bottom: 5%;
     color: #E51616;
     font-size: 30px;
     font-family: 'Montserrat-UltraLight';
+}
+
+.profile{
+    display: block;
+    float: left;
+    height: 300px;
+    width: 25%;
+    margin-left: 4%;
+    padding: 1.4rem 1rem 1rem 1rem;
+    text-align: left;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.profilearticle{
+    display: block;
+    float: left;
+    height: 300px;
+    width: 25%;
+    margin: 0 5% 5% 5%;
+    padding: 1.4rem 1rem 1rem 1rem;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.editprofile{
+    display: block;
+    float: left;
+    height: 300px;
+    width: 25%;
+    padding: 1.4rem 30px 1rem 1rem;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.editprofile input{
+
+}
+
+.editprofile label{
+
 }
 
 .formlogin{

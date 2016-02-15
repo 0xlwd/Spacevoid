@@ -22,7 +22,7 @@
     </form>
   </div>
   <div class="footer">
-    &copy;<?= date('Y'); ?>
+    SpaceVoid &copy; <?= date('Y'); ?>
   </div>
   </body>
 </html>

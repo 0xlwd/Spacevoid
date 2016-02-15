@@ -19,7 +19,7 @@
         <input type="password" name="password" class="password" placeholder="Password">
         </div>
         <div class="divbtn">
-          <input type="submit" value="Connexion" class="btn">
+          <a href="#"><input type="submit" value="Connexion" class="btn"></a>
           <a href="../../register" class="btn">S'inscrire</a>
         </div>
       </form>

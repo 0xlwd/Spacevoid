@@ -38,7 +38,6 @@ class UserModel{
         $database->bindParam("firstname",$firstname);
         $database->bindParam("lastname",$lastname);
         $database->bindParam("id", $id);
-        var_dump($database);
         $database->execute();
     }
 
