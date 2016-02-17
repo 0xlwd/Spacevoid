@@ -55,12 +55,13 @@ body{
     margin: 20px 0 30px 0;
     padding: 7px 10% 7px 10%;
     border: solid #E51616 2px;
+    cursor: pointer;
 }
 
 .btn:hover{
     color: white;
     background-color: #E51616;
-    transition: 1s ease;
+    transition: .3s ease;
 }
 
 .disconnectbtn{
@@ -77,7 +78,7 @@ body{
 .disconnectbtn:hover{
     color: white;
     background-color: #E51616;
-    transition: 1s ease;
+    transition: .3s ease;
 }
 
 .disconnectdiv{
@@ -111,11 +112,16 @@ input{
     font-family: 'Montserrat-UltraLight';
 }
 
+.titlediv{
+    text-align: center;
+}
+
 .profile{
     display: block;
     float: left;
     height: 300px;
     width: 25%;
+    line-height: 2rem;
     margin-left: 4%;
     padding: 1.4rem 1rem 1rem 1rem;
     text-align: left;
@@ -153,12 +159,22 @@ input{
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
 }
 
-.editprofile input{
-
+.editprofile .forminput{
+    display: inline-block;
+    height: 14px;
+    float: right;
+    background-color: white;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    margin: 1px 1px 3px 10px;
+    padding: 3px 15px 3px 15px;
+    border: solid #E51616 1px;
 }
 
 .editprofile label{
-
+    float: left;
+    text-align: left;
+    width: 380px;
 }
 
 .formlogin{
@@ -219,7 +235,6 @@ input{
 
 .login,.password,.email{
     display: inline-block;
-    color: #E51616;
     background-color: white;
     font-family: 'Montserrat';
     text-decoration: none;

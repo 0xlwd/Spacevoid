@@ -7,16 +7,13 @@
   </head>
   <body>
   <div class="header">
-
-  </div>
-  <div class="sidebar">
-
+    <a href="../../public/index.php" class="accueil"><img src="../../public/img/logospacevoid.png" class="logospace"></a>
   </div>
   <div class="container">
     <div class="post">
       <img src="<?= App::img($data['posts']['post_cover']); ?>" alt="<?= $data['posts']['title'] ?>" />
       <h1><?= $data['posts']['title'] ?></h1>
-      <p><?= utf8_encode($data['posts']['content']) ?></p>
+      <p class="contentpost"><?= utf8_encode($data['posts']['content']) ?></p>
       <span>Posté le <b><?= $data['posts']['post_date'] ?></b> par <b><?= $data['author']['login'] ?></b></span>
     </div>
     <div class="comments">

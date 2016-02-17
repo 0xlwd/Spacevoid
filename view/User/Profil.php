@@ -15,7 +15,7 @@
     </div>
     <ul>
       <li><div class="profile">
-          <h1>Profil</h1>
+          <h1 class="titlediv">Profil</h1>
           Vous avez le rang de : <?=$data['user']['role'] ?><br>
           Pseudo : <?= $data['user']['login'] ?><br>
           Nom : <?= $data['user']['lastname'] ?><br>
@@ -26,7 +26,7 @@
       </li>
       <li>
         <div class="profilearticle">
-          <h2>Vos articles</h2>
+          <h1 class="titlediv">Vos articles</h1>
           <div class="article">
             <?php foreach ($data['posts'] as $post) {?>
               <a href="./post/<?= $post['id'] ?>"><?= $post['title'] ?> </a>
@@ -40,20 +40,31 @@
       </li>
       <li>
         <div class="editprofile">
-          <h2>Modifier votre profil</h2>
+          <h1 class="titlediv">Modifier votre profil</h1>
           <form action="profile" method="post">
-            <label for="login">Login</label>
-            <input id="login" type="text" name="login" value="<?= $data['user']['login'] ?>"><br>
-            <label for="firstname">First Name</label>
-            <input id="firstname" type="text" name="firstname" value="<?=$data['user']['firstname']?>"><br>
-            <label for="lastname">Last Name</label>
-            <input id="lastname" type="text" name="lastname" value="<?=$data['user']['lastname']?>"><br>
-            <label for="description">Description</label>
-            <input id="description" type="text" name="description" value="<?=$data['user']['description']?>"><br>
-            <label for="email">Email : </label>
-            <input id="email" type="email" name="mail" value="<?=$data['user']['mail']?>"><br>
-            <label for="password">password : </label>
-            <input id="password" type="password" name="password" value="">
+            <label for="login">Login :
+              <input id="login" type="text" name="login" class="forminput" value="<?= $data['user']['login'] ?>"><br>
+            </label>
+
+            <label for="firstname">First Name :
+              <input id="firstname" type="text" name="firstname" class="forminput" value="<?=$data['user']['firstname']?>"><br>
+            </label>
+
+            <label for="lastname">Last Name :
+              <input id="lastname" type="text" name="lastname" class="forminput" value="<?=$data['user']['lastname']?>"><br>
+            </label>
+
+            <label for="description">Description :
+              <input id="description" type="text" name="description" class="forminput" value="<?=$data['user']['description']?>"><br>
+            </label>
+
+            <label for="email">Email :
+              <input id="email" type="email" name="mail" class="forminput" value="<?=$data['user']['mail']?>"><br>
+            </label>
+
+            <label for="password">password :
+              <input id="password" type="password" name="password" class="forminput" value="">
+            </label>
             <input type="submit" name="name" value="Enregistrer" class="btn">
           </form>
         </div>

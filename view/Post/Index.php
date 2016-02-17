@@ -6,23 +6,23 @@
     <link href="<?= App::css("StylePost");?>" rel="stylesheet">
   </head>
   <body>
-  <div class="header">
+  <div class="headerindex">
     <div class="divbtn">
       <a href="../../login" class="headerbtn">Connexion</a>
       <a href="../../register" class="headerbtn">Inscription</a>
     </div>
-    <img src="../../public/img/logospacevoid.png" class="logospace">
+    <a href="../../public/index.php" class="accueil"><img src="../../public/img/logospacevoid.png" class="logospaceindex"></a>
   </div>
   <div class="sidebar">
 
   </div>
-  <div class="container">
+  <div class="containerindex">
     <?php foreach($data['posts'] as $post) { ?>
       <div class="post">
         <img src="<?= App::img($post['post_cover']); ?>" alt="<?= utf8_encode($post["title"]) ?>">
-        <h1 class="titlepost"><a href="post/<?= $post["id"] ?>" class="postlinks"><?= utf8_encode($post["title"]) ?> </a></h1><br>
+        <h1 class="titlepostindex"><a href="post/<?= $post["id"] ?>" class="postlinks"><?= utf8_encode($post["title"]) ?> </a></h1><br>
         <span>Date de publication : </span> <b><?= utf8_encode($post["post_date"]) ?></b>
-        <p class="contentpost"><?= utf8_encode(substr($post["content"], 0, 350).'...') ?><p><br>
+        <p class="contentpostindex"><?= utf8_encode(substr($post["content"], 0, 350).'...') ?><p><br>
         <a href="post/<?= $post["id"] ?>" class="readpostbtn">Lire la suite</a>
      </div>
     <?php } ?>
