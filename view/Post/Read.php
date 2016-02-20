@@ -23,7 +23,7 @@
       <?php } ?>
     </div>
     <?php if($data['connected'] == true){ ?>
-      <form action="../../post/comment" method="post">
+      <form method="post" id="newComment">
         <textarea name="content" rows="20" cols="80" placeholder="Commentaire"></textarea>
         <input type="text" name="post_id" value="<?= $data['posts']['id']?>" hidden>
         <input type="text" name="user_id" value="<?= $data['current_user'] ?>" hidden>
@@ -38,5 +38,7 @@
   <div class="footer">
     SpaceVoid &copy; <?= date('Y'); ?>
   </div>
+  <script src="<?= App::js("jquery-2.2.0.min") ?>"></script>
+  <script src="<?= App::js("Post") ?>"></script>
   </body>
 </html>

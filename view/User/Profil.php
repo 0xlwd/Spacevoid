@@ -41,7 +41,7 @@
       <li>
         <div class="editprofile">
           <h1 class="titlediv">Modifier votre profil</h1>
-          <form action="profile" method="post">
+          <form method="post" id="updateUser">
             <label for="login">Login :
               <input id="login" type="text" name="login" class="forminput" value="<?= $data['user']['login'] ?>"><br>
             </label>
@@ -71,11 +71,13 @@
       </li>
     </ul>
     <div class="disconnectdiv">
-    <a href="/user/disconnect" class="disconnectbtn">Se déconnecter</a>
+    <a class="disconnectbtn" id="disconnect">Se déconnecter</a>
     </div>
   </div>
   <div class="footer">
     SpaceVoid &copy; <?= date('Y'); ?>
   </div>
+  <script src="<?= App::js('jquery-2.2.0.min') ?>"></script>
+  <script src="<?= App::js('User') ?>"></script>
   </body>
 </html>

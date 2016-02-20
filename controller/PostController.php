@@ -2,7 +2,6 @@
 require_once '../model/PostModel.php';
 require_once '../model/CommentModel.php';
 require_once '../model/UserModel.php';
-require_once 'UserController.php';
 class PostController {
 
   public function Index(){
@@ -18,6 +17,7 @@ class PostController {
 
   public function ReadPost($postID) {
 
+    require_once '../Controller/UserController.php';
     $posts = new PostModel();
     $post = $posts->GetPost($postID);
     $comment = new CommentModel();
@@ -34,7 +34,7 @@ class PostController {
       'posts' => $post,
       'author' => $author,
       'comments' => $comments,
-      'connected' => UserController::isUserConnected(),
+      'connected' => UserController::IsUserConnected(),
       'current_user' => $currentUserId
     ]);
 
@@ -43,8 +43,8 @@ class PostController {
   public function EditPost($postID) {
 
     require_once '../Controller/UserController.php';
-    $role = UserController::getUserPermission();
-    if(UserController::isUserConnected()){
+    $role = UserController::GetUserRole();
+    if(UserController::IsUserConnected()){
       if(isset($role) && $role == 'blogger' || $role == 'superadmin'){
           $posts = new PostModel();
           $post = $posts->GetPost($postID);
@@ -53,9 +53,13 @@ class PostController {
               if(is_uploaded_file($_FILES['post_cover']['tmp_name'])) {
                 $coverImage = App::SaveImage();
                 $posts->UpdatePost($post['id'], $_POST['title'], $_POST['content'], $coverImage);
+                echo json_encode(['success' => 'Post updated', 'New image' => true, 'article id' => $post['id']]);
+                die();
               } else {
                 $coverImage = $post['post_cover'];
                 $posts->UpdatePost($post['id'], $_POST['title'], $_POST['content'], $coverImage);
+                echo json_encode(['success' => 'Post updated', 'New image' => false, 'article id' => $post['id']]);
+                die();
               }
 
             }
@@ -89,15 +93,16 @@ class PostController {
   public function NewPost(){
 
     require_once '../Controller/UserController.php';
-    $role = UserController::getUserPermission();
-    if(UserController::isUserConnected()){
+    $role = UserController::GetUserRole();
+    if(UserController::IsUserConnected()){
       if(isset($role) && $role == 'blogger' || $role == 'superadmin'){
 
-        if(isset($_POST['title']) && isset($_POST['content']) && isset($_FILES['post_cover'])){
+        if(isset($_POST['title']) && isset($_POST['content']) && is_uploaded_file($_FILES['post_cover']['tmp_name'])){
 
           $coverImage = App::SaveImage();
           $posts = new PostModel();
           $posts->CreatePost($_POST['title'], $_POST['content'], $_SESSION['user_id'], $coverImage);
+          echo json_encode(['success' => true, 'message' => 'Votre article a bien été enregistré']);
 
         } else {
 
@@ -123,9 +128,20 @@ class PostController {
   }
 
   public function Delete($postID){
-
+    require_once '../Controller/UserController.php';
     $posts = new PostModel();
-    $post = $posts->DeletePost($postID);
+    $post = $posts->GetPost($postID);
+    $role = UserController::GetUserRole();
+    if(UserController::IsUserConnected()){
+      if($_SESSION['user_id'] == $post['user_related_id'] || $role == 'superadmin'){
+        $post = $posts->DeletePost($postID);
+        header('location : ../../profile');
+      } else {
+        echo App::error('property');
+      }
+    } else {
+      echo App::error(401);
+    }
 
   }
 

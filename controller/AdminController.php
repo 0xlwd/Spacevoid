@@ -5,9 +5,9 @@ require_once '../model/PostModel.php';
 require_once '../model/CommentModel.php';
 class AdminController {
 
-  public function index(){
+  public function Dashboard(){
 
-    if(UserController::isUserConnected() && (UserController::getUserPermission() == 'superadmin')){
+    if(UserController::IsUserConnected() && (UserController::GetUserRole() == 'superadmin')){
 
       $post = new PostModel();
       $posts = $post->GetAllPosts();
@@ -23,7 +23,7 @@ class AdminController {
 
     } else {
 
-      App::Error(401);
+      App::Error('permission');
 
     }
 

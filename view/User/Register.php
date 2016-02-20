@@ -13,7 +13,8 @@
       <div class="title">
         <h1 class="fadeInUp">Bienvenue</h1>
       </div>
-      <form action="../../register" method="post" class="formregister">
+      <span id="error"></span>
+      <form id="registerForm" method="post" class="formregister">
         <div class="formdivregister">
         <input type="text" name="login" class="login" placeholder="Username">
         <input type="password" name="password" class="password" placeholder="Password">
@@ -28,5 +29,7 @@
   <div class="footer">
     SpaceVoid &copy; <?= date('Y'); ?>
   </div>
+  <script src="<?= App::js('jquery-2.2.0.min') ?>"></script>
+  <script src="<?= App::js('User') ?>"></script>
   </body>
 </html>

@@ -50,7 +50,6 @@ class PostModel{
                           WHERE `id` = :id");
         $database->bindParam("id",$id);
         $database->execute();
-        var_dump($database);
     }
 
     public function GetAllPosts() {
