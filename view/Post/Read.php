@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.20, initial-scale=1.0">
     <title><?= $data['title'] . $data['posts']['title'] ?></title>
     <link href="<?= App::css("StylePost");?>" rel="stylesheet">
   </head>
@@ -31,7 +32,7 @@
       </form>
     <?php } else { ?>
       <p>
-        Veuillez vous connecter pour poster un commentaire <a href="../../login">Connexion</a>
+        Veuillez vous connecter pour poster un commentaire : <a href="../../login">Connexion</a>
       </p>
     <?php } ?>
   </div>
