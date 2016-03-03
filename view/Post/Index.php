@@ -8,10 +8,14 @@
   <body>
   <div class="headerindex">
     <div class="divbtn">
-      <a href="../../login" class="headerbtn">Connexion</a>
-      <a href="../../register" class="headerbtn">Inscription</a>
+      <?php if($data['connected']){ ?>
+      <a href="../../profile" class="headerbtn">Profil</a>
+      <?php } else {?>
+        <a href="../../login" class="headerbtn">Connexion</a>
+        <a href="../../register" class="headerbtn">Inscription</a>
+      <?php } ?>
     </div>
-    <a href="../../public/index.php" class="accueil"><img src="../../public/img/logospacevoid.png" class="logospaceindex"></a>
+    <a href="../../" class="accueil"><img src="../../public/img/logospacevoid.png" class="logospaceindex"></a>
   </div>
   <div class="sidebar">
 

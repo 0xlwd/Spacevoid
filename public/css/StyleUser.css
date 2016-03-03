@@ -20,247 +20,254 @@
     }
 }
 
-.fadeInUp {
-    animation-name: fadeInUp;
-    animation-duration: 2s;
-}
+@media screen and (min-width:1025px) and (max-width:1440px) {
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat';
-}
+  .fadeInUp {
+      animation-name: fadeInUp;
+      animation-duration: 2s;
+  }
 
-.header{
-    height: 170px;
-    background-color: #E51616;
-}
+  body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat';
+  }
 
-.accueil{
-    display: inline-block;
-    margin-left: 37%;
-}
+  .header{
+      height: 170px;
+      background-color: #E51616;
+  }
 
-.logospace{
-    display: block;
-    margin: auto;
-}
+  .accueil{
+      display: block;
+      margin: auto;
+  }
 
-.btn{
-    display: inline-block;
-    color: #E51616;
-    background-color: white;
-    font-family: 'Montserrat';
-    text-decoration: none;
-    margin: 20px 0 30px 0;
-    padding: 7px 10% 7px 10%;
-    border: solid #E51616 2px;
-    cursor: pointer;
-}
+  .logospace{
+      display: block;
+      margin: auto;
+  }
 
-.btn:hover{
-    color: white;
-    background-color: #E51616;
-    transition: .3s ease;
-}
+  .btn{
+      display: inline-block;
+      color: #E51616;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      margin: 20px 0 30px 0;
+      padding: 7px 10% 7px 10%;
+      border: solid #E51616 2px;
+      cursor: pointer;
+  }
 
-.disconnectbtn{
-    display: inline-block;
-    width: 15%;
-    color: #E51616;
-    background-color: white;
-    font-family: 'Montserrat';
-    text-decoration: none;
-    padding: 7px 25px 7px 25px;
-    border: solid #E51616 2px;
-}
+  .btn:hover{
+      color: white;
+      background-color: #E51616;
+      transition: .3s ease;
+  }
 
-.disconnectbtn:hover{
-    color: white;
-    background-color: #E51616;
-    transition: .3s ease;
-}
+  .disconnectbtn{
+      display: inline-block;
+      width: 15%;
+      color: #E51616;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      padding: 7px 25px 7px 25px;
+      border: solid #E51616 2px;
+  }
 
-.disconnectdiv{
-    display: inline-block;
-    width: 100%;
-}
+  .disconnectbtn:hover{
+      color: white;
+      background-color: #E51616;
+      transition: .3s ease;
+  }
 
-.divbtn{
-    height: 50px;
-}
+  .disconnectdiv{
+      display: inline-block;
+      width: 100%;
+  }
 
-input{
-    font-size: 16px;
-}
+  .divbtn{
+      height: 50px;
+  }
 
-.container{
-    text-align: center;
-    margin-top: 5%;
-}
+  input{
+      font-size: 16px;
+  }
 
-.container ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+  .container{
+      text-align: center;
+      margin-top: 5%;
+  }
 
-.title{
-    margin-bottom: 5%;
-    color: #E51616;
-    font-size: 30px;
-    font-family: 'Montserrat-UltraLight';
-}
+  .container ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
 
-.titlediv{
-    text-align: center;
-}
+  .title{
+      margin-bottom: 5%;
+      color: #E51616;
+      font-size: 30px;
+      font-family: 'Montserrat-UltraLight';
+  }
 
-.profile{
-    display: block;
-    float: left;
-    height: 300px;
-    width: 25%;
-    line-height: 2rem;
-    margin-left: 4%;
-    padding: 1.4rem 1rem 1rem 1rem;
-    text-align: left;
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .titlediv{
+      text-align: center;
+  }
 
-.profilearticle{
-    display: block;
-    float: left;
-    height: 300px;
-    width: 25%;
-    margin: 0 5% 5% 5%;
-    padding: 1.4rem 1rem 1rem 1rem;
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .profile{
+      display: block;
+      float: left;
+      height: 300px;
+      width: 25%;
+      line-height: 2rem;
+      margin-left: 4%;
+      padding: 1.4rem 1rem 1rem 1rem;
+      text-align: left;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      overflow: hidden;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
 
-.editprofile{
-    display: block;
-    float: left;
-    height: 300px;
-    width: 25%;
-    padding: 1.4rem 30px 1rem 1rem;
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .profilearticle{
+      display: block;
+      float: left;
+      height: 300px;
+      width: 25%;
+      margin: 0 5% 5% 5%;
+      padding: 1.4rem 1rem 1rem 1rem;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
 
-.editprofile .forminput{
-    display: inline-block;
-    height: 14px;
-    float: right;
-    background-color: white;
-    font-family: 'Montserrat';
-    text-decoration: none;
-    margin: 1px 1px 3px 10px;
-    padding: 3px 15px 3px 15px;
-    border: solid #E51616 1px;
-}
+  .editprofile{
+      display: block;
+      float: left;
+      height: 300px;
+      width: 25%;
+      padding: 1.4rem 30px 1rem 1rem;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      overflow: hidden;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
 
-.editprofile label{
-    float: left;
-    text-align: left;
-    width: 380px;
-}
+  .editprofile .forminput{
+      display: inline-block;
+      height: 14px;
+      float: right;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      margin: 1px 1px 3px 10px;
+      padding: 3px 15px 3px 15px;
+      border: solid #E51616 1px;
+  }
 
-.formlogin{
-    margin-right: auto;
-    margin-left: auto;
-    height: 250px;
-    width: 845px;
-    text-align: center;
-    padding: 1.4rem 0 1rem 0;
-    font-family: 'Montserrat';
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .editprofile label{
+      float: left;
+      text-align: left;
+      width: 380px;
+  }
 
-.formregister{
-    margin-right: auto;
-    margin-left: auto;
-    height: 350px;
-    width: 845px;
-    text-align: center;
-    padding: 1.4rem 0 1rem 0;
-    font-family: 'Montserrat';
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .formlogin{
+      margin-right: auto;
+      margin-left: auto;
+      height: 250px;
+      width: 845px;
+      text-align: center;
+      padding: 1.4rem 0 1rem 0;
+      font-family: 'Montserrat';
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
 
-.formdivlogin{
-    margin-right: auto;
-    margin-left: auto;
-    height: 155px;
-    width: 350px;
-    padding: 1.4rem 0 1rem 0;
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .formregister{
+      margin-right: auto;
+      margin-left: auto;
+      height: 350px;
+      width: 845px;
+      text-align: center;
+      padding: 1.4rem 0 1rem 0;
+      font-family: 'Montserrat';
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
 
-.formdivregister{
-    margin-right: auto;
-    margin-left: auto;
-    height: 260px;
-    width: 350px;
-    padding: 1.4rem 0 1rem 0;
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .formdivlogin{
+      margin-right: auto;
+      margin-left: auto;
+      height: 155px;
+      width: 350px;
+      padding: 1.4rem 0 1rem 0;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
 
-.login,.password,.email{
-    display: inline-block;
-    background-color: white;
-    font-family: 'Montserrat';
-    text-decoration: none;
-    padding: 15px 25px 15px 25px;
-    border: solid #E51616 2px;
-}
+  .formdivregister{
+      margin-right: auto;
+      margin-left: auto;
+      height: 260px;
+      width: 350px;
+      padding: 1.4rem 0 1rem 0;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
 
-.login{
-    margin-bottom: 45px;
-}
+  .login,.password,.email{
+      display: inline-block;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      padding: 15px 25px 15px 25px;
+      border: solid #E51616 2px;
+  }
 
-.password{
-    margin-bottom: 45px;
-}
+  .login{
+      margin-bottom: 45px;
+  }
 
-.email{
-    margin-bottom: 25px;
-}
+  .password{
+      margin-bottom: 45px;
+  }
 
-.footer{
-    background-color: #E51616;
-    text-align: center;
-    font-family: 'Montserrat';
-    color: white;
-    margin-top: 246px;
-    line-height: 50px;
-    height: 50px;
-    padding: 20px;
+  .email{
+      margin-bottom: 25px;
+  }
+
+  .footer{
+      background-color: #E51616;
+      text-align: center;
+      font-family: 'Montserrat';
+      color: white;
+      margin-top: 246px;
+      line-height: 50px;
+      height: 50px;
+      padding: 20px;
+  }
 }

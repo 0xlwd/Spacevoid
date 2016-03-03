@@ -6,11 +6,14 @@ class PostController {
 
   public function Index(){
 
+    require_once '../Controller/UserController.php';
+    $user = new UserModel();
     $posts = new PostModel();
     $post = $posts->GetAllPosts();
     App::view('post', 'index', [
       'title' => 'SpaceVoid - Espace et Science',
-      'posts' => $post
+      'posts' => $post,
+      'connected' => UserController::IsUserConnected()
     ]);
 
   }

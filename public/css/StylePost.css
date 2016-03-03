@@ -20,228 +20,242 @@
     }
 }
 
-.fadeInUp {
-    animation-name: fadeInUp;
-    animation-duration: 2s;
-}
+@media screen and (min-width:1025px) and (max-width:1440px) {
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat';
-}
 
-.container{
-    text-align: center;
-    margin-top: 5%;
-}
+  .fadeInUp {
+      animation-name: fadeInUp;
+      animation-duration: 2s;
+  }
 
-.container ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+  body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat';
+  }
 
-.headerindex{
-    height: 400px;
-    background-color: #2c3e50;
-}
+  .container{
+      text-align: center;
+      margin-top: 5%;
+  }
 
-.header{
-    height: 170px;
-    background-color: #2c3e50;
-}
+  .container ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
 
-.headerbtn{
-    display: inline-block;
-    color: white;
-    font-family: 'Montserrat';
-    float: right;
-    margin: 15px 20px 0 10px;
-    text-decoration: none;
-    border: solid white 2px;
-    padding: 7px 25px 7px 25px;
-}
+  .headerindex{
+      height: 400px;
+      background-color: #2c3e50;
+  }
 
-.headerbtn:hover{
-    color: #2c3e50;
-    background-color: white;
-    transition: .3s ease;
-}
+  .header{
+      height: 170px;
+      background-color: #2c3e50;
+  }
 
-.title{
-    margin-bottom: 5%;
-    color: #2c3e50;
-    font-size: 30px;
-    font-family: 'Montserrat-UltraLight';
-}
+  .headerbtn{
+      display: inline-block;
+      color: white;
+      font-family: 'Montserrat';
+      float: right;
+      margin: 15px 20px 0 10px;
+      text-decoration: none;
+      border: solid white 2px;
+      padding: 7px 25px 7px 25px;
+  }
 
-.divbtn{
-    height: 75px;
-}
+  .headerbtn:hover{
+      color: #2c3e50;
+      background-color: white;
+      transition: .3s ease;
+  }
 
-.logospaceindex{
+  .title{
+      margin-bottom: 5%;
+      color: #2c3e50;
+      font-size: 30px;
+      font-family: 'Montserrat-UltraLight';
+  }
+
+  .divbtn{
+      height: 75px;
+  }
+
+  .logospaceindex{
+      display: block;
+      margin: auto;
+      padding-top: 50px;
+  }
+
+  .logospace{
+      display: block;
+      margin: auto;
+  }
+
+  .accueil{
+      display: block;
+      margin:auto;
+  }
+
+  .post{
+      margin-right: auto;
+      margin-left: auto;
+      width: 945px;
+      text-align: center;
+      padding: 1.4rem 0 1rem 0;
+      font-family: 'Montserrat';
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
+  .post img{
+    width: 900px;
+    height: 506px;
     display: block;
-    margin: auto;
-    padding-top: 50px;
-}
+    margin-left: 22px;
+  }
 
-.logospace{
-    display: block;
-    margin: auto;
-}
+  .post:first-of-type {
+      margin-top: -40px;
+      background-color: white;
+  }
 
-.accueil{
-    display: inline-block;
-    margin-left: 37%;
-}
+  .post:not(:first-of-type) {
+      margin-top: 40px;
+  }
 
-.post{
-    margin-right: auto;
-    margin-left: auto;
-    width: 945px;
-    text-align: center;
-    padding: 1.4rem 0 1rem 0;
-    font-family: 'Montserrat';
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .contentpostindex{
+      padding: 10px 50px 20px 50px;
+      width: 89%;
+      font-weight: 300;
+      font-family: 'Montserrat-UltraLight';
 
-.post:first-of-type {
-    margin-top: -40px;
-    background-color: white;
-}
+  }
 
-.post:not(:first-of-type) {
-    margin-top: 40px;
-}
+  .contentpost{
+      padding: 10px 50px 20px 50px;
+      width: 90%;
+      text-align: justify;
+      line-height: 40px;
+  }
 
-.contentpostindex{
-    padding: 10px 50px 20px 50px;
-    width: 89%;
-}
+  .formdiv{
+      display: inline-block;
+      height: 500px;
+      width: 75%;
+      line-height: 90px;
+      padding: 1.4rem 1rem 1rem 1rem;
+      -moz-box-shadow: 0px 1px 2px 0px #656565;
+      -webkit-box-shadow: 0px 1px 2px 0px #656565;
+      -o-box-shadow: 0px 1px 2px 0px #656565;
+      box-shadow: 0px 1px 2px 0px #656565;
+  }
 
-.contentpost{
-    padding: 10px 50px 20px 50px;
-    width: 90%;
-    text-align: justify;
-    line-height: 40px;
-}
+  .textpost{
+      max-height: 200px;
+      max-width: 75%;
+      min-height: 200px;
+      min-width: 75%;
+      text-align: center;
+      font-family: 'Montserrat';
+      padding: 10px 0 0 0;
+      border: solid #2c3e50 2px;
+  }
 
-.formdiv{
-    display: inline-block;
-    height: 500px;
-    width: 75%;
-    line-height: 90px;
-    padding: 1.4rem 1rem 1rem 1rem;
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  .readpostbtn{
+      margin: auto;
+      color: #2c3e50;
+      border: solid #2c3e50 2px;
+      text-decoration: none;
+      padding: 7px 40px 7px 40px;
+  }
 
-.textpost{
-    max-height: 200px;
-    max-width: 75%;
-    min-height: 200px;
-    min-width: 75%;
-    text-align: center;
-    font-family: 'Montserrat';
-    padding: 10px 0 0 0;
-    border: solid #2c3e50 2px;
-}
+  .readpostbtn:hover{
+      color: white;
+      background-color: #2c3e50;
+      transition: .3s ease;
+  }
 
-.readpostbtn{
-    margin: auto;
-    color: #2c3e50;
-    border: solid #2c3e50 2px;
-    text-decoration: none;
-    padding: 7px 40px 7px 40px;
-}
+  .titlepostindex{
+      padding: 10px 30px 0 45px;
+      width: 89%;
+  }
 
-.readpostbtn:hover{
-    color: white;
-    background-color: #2c3e50;
-    transition: .3s ease;
-}
+  .titlepost{
+      padding: 10px 0 10px 0;
+      width: 75%;
+      text-align: center;
+      font-family: 'Montserrat';
+      border: solid #2c3e50 2px;
+  }
 
-.titlepostindex{
-    padding: 10px 30px 0 45px;
-    width: 89%;
-}
+  .postlinks{
+      text-decoration: none;
+      color: #404040;
+  }
 
-.titlepost{
-    padding: 10px 0 10px 0;
-    width: 75%;
-    text-align: center;
-    font-family: 'Montserrat';
-    border: solid #2c3e50 2px;
-}
+  .postlinks:hover{
+      color: #000051;
+      transition: .3s ease;
+  }
 
-.postlinks{
-    text-decoration: none;
-    color: #404040;
-}
+  .btn{
+      display: inline-block;
+      color: #2c3e50;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      margin: 29px 0 30px 0;
+      padding: 7px 10% 7px 10%;
+      border: solid #2c3e50 2px;
+      cursor: pointer;
+  }
 
-.postlinks:hover{
-    color: #000051;
-    transition: .3s ease;
-}
+  .btn:hover{
+      color: white;
+      background-color: #2c3e50;
+      transition: .3s ease;
+  }
 
-.btn{
-    display: inline-block;
-    color: #2c3e50;
-    background-color: white;
-    font-family: 'Montserrat';
-    text-decoration: none;
-    margin: 29px 0 30px 0;
-    padding: 7px 10% 7px 10%;
-    border: solid #2c3e50 2px;
-    cursor: pointer;
-}
+  .filebtn{
+      display: none;
 
-.btn:hover{
-    color: white;
-    background-color: #2c3e50;
-    transition: .3s ease;
-}
+  }
 
-.filebtn{
-    display: none;
-
-}
-
-.filebtnlabel{
-    width: 25%;
-    color: #2c3e50;
-    background-color: white;
-    font-family: 'Montserrat';
-    text-decoration: none;
-    padding: 7px 25px 7px 25px;
-    border: solid #2c3e50 2px;
-}
+  .filebtnlabel{
+      width: 25%;
+      color: #2c3e50;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      padding: 7px 25px 7px 25px;
+      border: solid #2c3e50 2px;
+  }
 
 
-.filebtnlabel:hover{
-    color: white;
-    background-color: #2c3e50;
-    transition: .3s ease;
-    cursor: pointer;
-}
+  .filebtnlabel:hover{
+      color: white;
+      background-color: #2c3e50;
+      transition: .3s ease;
+      cursor: pointer;
+  }
 
 
 
-.footer{
-    background-color: #2c3e50;
-    text-align: center;
-    font-family: 'Montserrat';
-    color: white;
-    margin-top: 100px;
-    line-height: 100px;
-    height: 100px;
-    padding: 20px;
+  .footer{
+      background-color: #2c3e50;
+      text-align: center;
+      font-family: 'Montserrat';
+      color: white;
+      margin-top: 100px;
+      line-height: 100px;
+      height: 100px;
+      padding: 20px;
+  }
+
 }

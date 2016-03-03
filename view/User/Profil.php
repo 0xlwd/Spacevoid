@@ -14,13 +14,14 @@
       <h1 class="fadeInUp">Bienvenue, <?= $data['user']['firstname'] ?></h1>
     </div>
     <ul>
-      <li><div class="profile">
+      <li>
+        <div class="profile">
           <h1 class="titlediv">Profil</h1>
           Vous avez le rang de : <?=$data['user']['role'] ?><br>
           Pseudo : <?= $data['user']['login'] ?><br>
           Nom : <?= $data['user']['lastname'] ?><br>
           Prénom : <?= $data['user']['firstname'] ?><br>
-          Description : <?= $data['user']['description'] ?><br>
+          Description : <?= substr($data['user']['description'],0,50 ) . '...' ?><br>
           Mail : <?= $data['user']['mail'] ?><br>
         </div>
       </li>

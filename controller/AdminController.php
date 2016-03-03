@@ -18,7 +18,8 @@ class AdminController {
       App::view('admin', 'dashboard', [
         'posts' => $posts,
         'users' => $users,
-        'comments' => $comments
+        'comments' => $comments,
+        'title' => 'Dashboard'
       ]);
 
     } else {
