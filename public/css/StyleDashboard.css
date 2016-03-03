@@ -87,7 +87,7 @@ body{
     text-align: center;
 }
 
-.posts{
+.posts {
     display: block;
     float: left;
     height: 300px;
@@ -95,6 +95,35 @@ body{
     margin-left: 4%;
     padding: 1.4rem 1rem 1rem 1rem;
     overflow-y: auto;
+}
+
+body{
+  font-family: 'Montserrat';
+  font-size: 16px;
+  margin: 0;
+}
+
+
+@media screen and (min-width:1025px) and (max-width:1440px){
+
+  .header{
+      height: 350px;
+      background-color: #FFC107;
+      padding-top: 100px;
+  }
+
+  .accueil{
+      display: block;
+      margin: auto;
+      width: 411px;
+
+  }
+
+  .container{
+    display: block;
+    max-width: 1120px;
+    width: 100%;
+    margin: auto;
     -moz-box-shadow: 0px 1px 7px 0px #656565;
     -webkit-box-shadow: 0px 1px 7px 0px #656565;
     -o-box-shadow: 0px 1px 7px 0px #656565;
@@ -133,12 +162,110 @@ body{
     text-align: left;
     overflow-y: auto;
     padding: 1.4rem 30px 1rem 1rem;
+    /*padding: 40px;*/
+    z-index: 2000;
+    margin-top: -100px;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
+  .posts{
+
+    display: block;
+
+  }
+
+  table{
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    width: 100%;
+
+  }
+
+  tr{
+
+    border: 1px solid black;
+    padding: 10px;
+
+  }
+
+  tr:nth-child(2n+1){
+    background-color: #ebebeb;
+  }
+
+  th{
+
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+
+  }
+  td{
+
+    padding: 10px;
+    border: 1px solid black;
+
+  }
+
+  a{
+    color: #FFC107;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #FF9800;
+  }
+
+
+  .action-btn{
+    padding: 10px;
+    color: #FFC107;
+    border: 2px solid #FFC107;
+    transition: all 0.3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .action-btn:hover{
+    color: white;
+    background-color: #FFC107;
+
+
+  }
+
+}
+
+@media screen and (min-width:1441px){
+
+  .header{
+      height: 350px;
+      background-color: #FFC107;
+      padding-top: 100px;
+  }
+
+  .accueil{
+      display: block;
+      margin: auto;
+      width: 411px;
+
+  }
+
+  .container{
+    display: block;
+    max-width: 1120px;
+    width: 100%;
+    margin: auto;
     -moz-box-shadow: 0px 1px 7px 0px #656565;
     -webkit-box-shadow: 0px 1px 7px 0px #656565;
     -o-box-shadow: 0px 1px 7px 0px #656565;
     box-shadow: 0px 1px 7px 0px #656565;
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-}
+  }
 
 .articlecomment{
     display: block;
@@ -241,4 +368,84 @@ body{
         width: 75%;
         margin: 4%;
     }
+
+}
+
+.container{
+    padding: 40px;
+    z-index: 2000;
+    margin-top: -100px;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
+  .posts{
+
+    display: block;
+
+  }
+
+  table{
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    width: 100%;
+
+  }
+
+  tr{
+
+    border: 1px solid black;
+    padding: 10px;
+
+  }
+
+  tr:nth-child(2n+1){
+    background-color: #ebebeb;
+  }
+
+  th{
+
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+
+  }
+  td{
+
+    padding: 10px;
+    border: 1px solid black;
+
+  }
+
+  a{
+    color: #FFC107;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #FF9800;
+  }
+
+
+  .action-btn{
+    padding: 10px;
+    color: #FFC107;
+    border: 2px solid #FFC107;
+    transition: all 0.3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .action-btn:hover{
+    color: white;
+    background-color: #FFC107;
+
+
+  }
+
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=0.20, initial-scale=1.0">
     <title><?= $data['title'] ?></title>
     <link href="<?= App::css("StylePost");?>" rel="stylesheet">
+    <link href="<?= App::css("yellow-text-default") ?>" rel="stylesheet">
   </head>
   <body>
   <div class="header">
@@ -31,5 +32,13 @@
   </div>
   <script src="<?= App::js("jquery-2.2.0.min") ?>"></script>
   <script src="<?= App::js("Post") ?>"></script>
+  <script src="<?= App::js('yellow-text.min') ?>"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#content").YellowText({
+
+    });
+  });
+  </script>
   </body>
 </html>
