@@ -48,23 +48,23 @@ class Routes {
 
       if($action == 'connect') {
 
-        $UserController->userConnect($_POST['login'], $_POST['password']);
+        $UserController->UserConnect($_POST['login'], $_POST['password']);
 
       } elseif ($action == 'disconnect'){
 
-        $UserController->userDisconnect();
+        $UserController->UserDisconnect();
 
       } elseif ($action == 'profile'){
 
-        $UserController->userProfile();
+        $UserController->UserProfile();
 
       } elseif ($action == 'login'){
 
-        $UserController->userLoginForm();
+        $UserController->UserLoginForm();
 
       } elseif ($action == 'register'){
 
-        $UserController->userRegister();
+        $UserController->UserRegister();
 
       } elseif ($action == 'delete'){
 
@@ -77,7 +77,7 @@ class Routes {
       $AdminController = new AdminController();
       if($action == 'index'){
 
-        $AdminController->index();
+        $AdminController->Dashboard();
 
       }
     }

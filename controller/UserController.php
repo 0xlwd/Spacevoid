@@ -3,7 +3,9 @@ require_once '../model/UserModel.php';
 require_once '../model/PostModel.php';
 class UserController {
 
-  public function userConnect($userPostedLogin, $userPostedPassword) {
+  public function UserConnect($userPostedLogin, $userPostedPassword) {
+
+    header('Content-Type: application/json');
 
     $userPassword = App::PasswordHash($userPostedPassword);
 
@@ -13,33 +15,36 @@ class UserController {
       $connect = $user->GetUserConnect($userPostedLogin, $userPassword);
       while($data = $connect->fetch()){
         $login = $data['login'];
-        $password = $data['password'];;
+        $password = $data['password'];
         $id = $data['id'];
       }
-      if($userPostedLogin == $login && $userPassword == $password) {
+      if(!empty($login) && !empty($password) && $userPostedLogin == $login && $userPassword == $password) {
         $user->UserConnectDate(date("d.m.Y"), $id);
         $_SESSION['user_id'] = $id;
-        header('location: ../profile');
+        echo json_encode(['success' => true, 'code' => 200]);
       } else {
-        header('location: ../login/invalid');
+        http_response_code(400);
+        echo json_encode(['error' => 'Incorrect user informations',  'code' => 400]);
       }
 
     } else {
-      header('location: ../login');
+      http_response_code(400);
+      echo json_encode(['error' => 'Empty form', 'code' => 400]);
     }
 
   }
 
-  public function userDisconnect() {
+  public function UserDisconnect() {
 
+    header('Content-Type: application/json');
     session_destroy();
     unset($_SESSION['user_id']);
-    header('location: ../');
+    echo json_encode(['success' => 'User disconnected', 'code' => 200]);
 
   }
 
 
-  public static function isUserConnected() {
+  public static function IsUserConnected() {
 
     if(isset($_SESSION['user_id'])) {
       return true;
@@ -49,7 +54,7 @@ class UserController {
 
   }
 
-  public static function getUserPermission(){
+  public static function GetUserRole(){
 
     if(isset($_SESSION['user_id'])){
       $user = new UserModel();
@@ -71,13 +76,13 @@ class UserController {
 
       }
     } else {
-      header('Location : ../login');
+      echo json_encode(['error' => 'User not connected', 'code' => 401]);
     }
 
 
   }
 
-  public function userLoginForm() {
+  public function UserLoginForm() {
 
     App::view('user', 'login', [
       'title' => 'SpaceVoid - Login'
@@ -85,9 +90,9 @@ class UserController {
 
   }
 
-  public function userProfile() {
+  public function UserProfile() {
 
-    $connection_status = $this->isUserConnected();
+    $connection_status = $this->IsUserConnected();
     if($connection_status === true) {
 
       if(isset($_POST['login']) && isset($_POST['mail'])){
@@ -100,7 +105,7 @@ class UserController {
 
         } else {
 
-          $password = $_POST['password'];
+          $password = App::PasswordHash($_POST['password']);
 
         }
 
@@ -123,14 +128,43 @@ class UserController {
 
   }
 
-  public function userRegister(){
+  public function UserRegister(){
 
     if(isset($_POST['login']) && isset($_POST['password']) &&  isset($_POST['mail'])){
 
-      echo 'registering';
-      $password = App::PasswordHash($_POST['password']);
-      $user = new UserModel();
-      $user->CreateUser($_POST['login'], $password, $_POST['mail'], '', '', '', 'user', date('d.m.Y'));
+      $dataOk = true;
+
+      if(strlen($_POST['login']) < 4){
+
+        $error['login'] = 'Votre pseudo doit faire plus de 4 caractères';
+        $dataOk = false;
+
+      }
+
+      if(strlen($_POST['password']) < 8){
+
+        $error['password'] = 'Votre mot de passe doit faire plus de 8 caractères';
+        $dataOk = false;
+
+      }
+
+      if (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
+
+        $error['mail'] = 'Votre mail n\'est pas valide';
+        $dataOk = false;
+
+      }
+
+      if($dataOk){
+        $password = App::PasswordHash($_POST['password']);
+        $user = new UserModel();
+        $user->CreateUser($_POST['login'], $password, $_POST['mail'], '', '', '', 'user', date('d.m.Y'));
+        echo json_encode(['success' => 'User registered', 'code' => 200]);
+      } else {
+        http_response_code(400);
+        echo json_encode($error);
+
+      }
 
     } else {
 

@@ -15,9 +15,10 @@
       <h1 class="fadeInUp">Nouvel article</h1>
     </div>
     <div class="formdiv">
-      <form method="post" action="../post/new" enctype="multipart/form-data">
-        <input type="text" name="title" class="titlepost" placeholder="Titre"><br>
-        <textarea name="content" rows="8" cols="40" class="textpost" placeholder="Contenu de l'article"></textarea><br>
+      <span class="errors"></span>
+      <form method="post" id="newPost" enctype="multipart/form-data">
+        <input type="text" name="title" class="titlepost" id="title" placeholder="Titre"><br>
+        <textarea name="content" rows="8" cols="40" class="textpost" id="content" placeholder="Contenu de l'article"></textarea><br>
         <label for="file" class="filebtnlabel">Choisissez une image de couverture</label>
         <input type="file" name="post_cover" class="filebtn" size="30" id="file"><br>
         <span>Date : <b><?= date("d.m.Y") ?></b></span><br>
@@ -28,5 +29,7 @@
   <div class="footer">
     SpaceVoid &copy; <?= date('Y'); ?>
   </div>
+  <script src="<?= App::js("jquery-2.2.0.min") ?>"></script>
+  <script src="<?= App::js("Post") ?>"></script>
   </body>
 </html>

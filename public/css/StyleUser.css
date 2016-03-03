@@ -73,6 +73,7 @@ body{
     text-decoration: none;
     padding: 7px 25px 7px 25px;
     border: solid #E51616 2px;
+    cursor: pointer;
 }
 
 .disconnectbtn:hover{
@@ -263,4 +264,75 @@ input{
     line-height: 50px;
     height: 50px;
     padding: 20px;
+}
+
+@media (max-width: 640px) {
+
+    .logospace{
+        width: 100%;
+        height: 100%;
+    }
+
+    .accueil{
+        margin: 0;
+    }
+
+    .profile{
+        display: block;
+        width: 80%;
+        height: 50%;
+        margin: 4%;
+    }
+
+    .profilearticle{
+        display: block;
+        width: 80%;
+        margin: 4%;
+    }
+
+    .editprofile{
+        display: block;
+        width: 77%;
+        height: 50%;
+        margin: 4%;
+    }
+
+    .editprofile label{
+        width: 250px;
+    }
+
+    .editprofile input{
+        width: 35%;
+    }
+
+    .editprofile .btn{
+        width: 70%;
+    }
+
+    .disconnectbtn{
+        width: 40%;
+        margin: 30px 10px 0 0;
+    }
+
+    .formlogin{
+        width: 90%;
+    }
+
+    .formdivlogin{
+        box-shadow: none;
+        width: 90%;
+    }
+
+    .formregister{
+        width: 90%;
+    }
+
+    .formdivregister{
+        box-shadow: none;
+        width: 90%;
+    }
+
+    .footer{
+        margin-top: 90px;
+    }
 }

@@ -20,16 +20,21 @@
     <div class="comments">
       <h3>Commentaires</h3>
       <?php foreach ($data['comments'] as $comments) { ?>
-        <p><?= $comments['content'] ?></p>
+        <h4><?= $comments['user_related_id'] ?> a dit :</h4>
+        <p class="paracomments"><?= $comments['content'] ?></p>
       <?php } ?>
     </div>
     <?php if($data['connected'] == true){ ?>
-      <form action="../../post/comment" method="post">
-        <textarea name="content" rows="20" cols="80" placeholder="Commentaire"></textarea>
-        <input type="text" name="post_id" value="<?= $data['posts']['id']?>" hidden>
-        <input type="text" name="user_id" value="<?= $data['current_user'] ?>" hidden>
-        <input type="submit" name="submit" value="Envoyer">
-      </form>
+        <div class="formread">
+          <form method="post" id="newComment">
+            <h3>Nouveau commentaire :</h3>
+            <textarea name="content" class="newcomms" rows="20" cols="80" placeholder="Commentaire"></textarea>
+            <br>
+            <input type="text" name="post_id" value="<?= $data['posts']['id']?>" hidden>
+            <input type="text" name="user_id" value="<?= $data['current_user'] ?>" hidden>
+            <input type="submit" name="submit" class="btn" value="Envoyer">
+          </form>
+        </div>
     <?php } else { ?>
       <p>
         Veuillez vous connecter pour poster un commentaire : <a href="../../login">Connexion</a>
@@ -39,5 +44,7 @@
   <div class="footer">
     SpaceVoid &copy; <?= date('Y'); ?>
   </div>
+  <script src="<?= App::js("jquery-2.2.0.min") ?>"></script>
+  <script src="<?= App::js("Post") ?>"></script>
   </body>
 </html>

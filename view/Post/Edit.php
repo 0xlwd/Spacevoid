@@ -21,13 +21,14 @@
         <?= utf8_encode($data['posts']['content']) ?>
       </textarea><br>
       <input type="file" name="post_cover" class="filebtn" size="30">
-      <span>Date de publication : <b><?= $data['posts']['post_date'] ?></b></span><br>
-      <input type="submit" name="name" class="btn" value="Envoyer">
-    </form>
+      <span class="postingdate">Date de publication : <b><?= $data['posts']['post_date'] ?></b></span><br>
+      <a href="../../public/index.php"><input type="submit" name="name" class="btn" value="Envoyer"></a>
     </div>
   </div>
   <div class="footer">
     SpaceVoid &copy; <?= date('Y'); ?>
   </div>
+  <script src="<?= App::js("jquery-2.2.0.min") ?>"></script>
+  <script src="<?= App::js("Post") ?>"></script>
   </body>
 </html>
