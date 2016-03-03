@@ -258,4 +258,19 @@
       padding: 20px;
   }
 
+  .comments{
+    margin-right: auto;
+    margin-left: auto;
+    width: 945px;
+    text-align: center;
+    padding: 1.4rem 0 1rem 0;
+    font-family: 'Montserrat';
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    margin-top: 40px;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
 }
