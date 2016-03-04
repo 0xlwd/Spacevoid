@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.20, initial-scale=1.0">
     <title><?= $data['title'] ?></title>
     <link href="<?= App::css("StylePost");?>" rel="stylesheet">
     <link href="<?= App::css("yellow-text-default") ?>" rel="stylesheet">
   </head>
   <body>
   <div class="header">
-    <a href="../../public/index.php" class="accueil"><img src="../../public/img/logospacevoid.png" class="logospace"></a>
+    <a href="../../" class="accueil"><img src="../../public/img/logospacevoid.png" class="logospace"></a>
   </div>
   <div class="container">
     <div class="title">

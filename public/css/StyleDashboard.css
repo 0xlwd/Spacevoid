@@ -8,12 +8,33 @@
     src: url('../font/Montserrat-UltraLight.otf');
 }
 
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../font/Montserrat-Light.otf');
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+}
+
 body{
   font-family: 'Montserrat';
   font-size: 16px;
   margin: 0;
 }
-
 
 
 @media screen and (min-width:1025px) and (max-width:1440px){
@@ -36,16 +57,17 @@ body{
     max-width: 1120px;
     width: 100%;
     margin: auto;
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
     padding: 40px;
     z-index: 2000;
     margin-top: -100px;
     margin-bottom: 50px;
     background-color: white;
-  }
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
 
   .posts{
 
@@ -138,84 +160,231 @@ body{
     max-width: 1120px;
     width: 100%;
     margin: auto;
-    -moz-box-shadow: 0px 1px 7px 0px #656565;
-    -webkit-box-shadow: 0px 1px 7px 0px #656565;
-    -o-box-shadow: 0px 1px 7px 0px #656565;
-    box-shadow: 0px 1px 7px 0px #656565;
     padding: 40px;
     z-index: 2000;
     margin-top: -100px;
     margin-bottom: 50px;
     background-color: white;
-  }
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
 
-  .posts{
 
+
+
+
+    .posts{
+
+      display: block;
+
+    }
+
+    table{
+
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+      width: 100%;
+
+    }
+
+    tr{
+
+      border: 1px solid black;
+      padding: 10px;
+
+    }
+
+    tr:nth-child(2n+1){
+      background-color: #ebebeb;
+    }
+
+    th{
+
+      border: 1px solid black;
+      padding: 10px;
+      background-color: white;
+
+    }
+    td{
+
+      padding: 10px;
+      border: 1px solid black;
+
+    }
+
+    a{
+      color: #FFC107;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    a:hover{
+      color: #FF9800;
+    }
+
+
+    .action-btn{
+      padding: 10px;
+      color: #FFC107;
+      border: 2px solid #FFC107;
+      transition: all 0.3s;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .action-btn:hover{
+      color: white;
+      background-color: #FFC107;
+
+
+    }
+@media (max-width: 640px){
+
+    .logospace{
+        width: 100%;
+        height: 100%;
+    }
+
+    .accueil{
+        margin: 0;
+    }
+
+    .posts{
+        display: block;
+        width: 80%;
+        margin: 4%;
+    }
+
+    .users{
+        display: block;
+        width: 80%;
+        margin: 4%;
+    }
+
+    .comments{
+        display: block;
+        width: 75%;
+        margin: 4%;
+    }
+
+
+
+.articlecomment{
     display: block;
+    margin-top: 4px;
+    font-size: 15px;
+    font-family: 'Montserrat-Light';
+}
 
-  }
+.contentpost{
+    padding: 10px 50px 20px 50px;
+    width: 90%;
+    text-align: justify;
+    line-height: 40px;
+}
 
-  table{
+.blockdiv{
+    display: inline-block;
+    height: 50%;
+    width: 75%;
+    padding: 1.4rem 1rem 1rem 1rem;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
 
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    width: 100%;
+.postlinks{
+    display: block;
+    margin-top: 40px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #404040;
+    font-family: 'Montserrat-Light';
+}
 
-  }
+.postlinks:hover{
+    color: #000051;
+    transition: .3s ease;
+}
 
-  tr{
-
-    border: 1px solid black;
-    padding: 10px;
-
-  }
-
-  tr:nth-child(2n+1){
-    background-color: #ebebeb;
-  }
-
-  th{
-
-    border: 1px solid black;
-    padding: 10px;
+.btn{
+    display: block;
+    color: #32D632;
     background-color: white;
-
-  }
-  td{
-
-    padding: 10px;
-    border: 1px solid black;
-
-  }
-
-  a{
-    color: #FFC107;
-    transition: all 0.3s;
-    text-decoration: none;
-  }
-  a:hover{
-    color: #FF9800;
-  }
-
-
-  .action-btn{
-    padding: 10px;
-    color: #FFC107;
-    border: 2px solid #FFC107;
-    transition: all 0.3s;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block;
+    font-family: 'Montserrat';
+    font-size: 13px;
     text-align: center;
+    width: 45%;
+    margin-left: 25%;
+    margin-top: 15px;
     text-decoration: none;
-  }
+    padding: 7px 4% 7px 4%;
+    border: solid #32D632 2px;
+    cursor: pointer;
+}
 
-  .action-btn:hover{
+.btn:hover{
     color: white;
-    background-color: #FFC107;
+    background-color: #32D632;
+    transition: .3s ease;
+}
 
+.footer{
+    background-color: #32D632;
+    text-align: center;
+    font-family: 'Montserrat';
+    color: white;
+    margin-top: 100px;
+    line-height: 100px;
+    height: 100px;
+    padding: 20px;
+}
 
-  }
+.users{
+    display: block;
+    float: left;
+    height: 300px;
+    width: 25%;
+    text-align: left;
+    overflow-y: auto;
+    margin: 0 5% 5% 5%;
+    padding: 1.4rem 1rem 1rem 1rem;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.userlist{
+    display: block;
+    margin-top: 4px;
+    font-size: 15px;
+    font-family: 'Montserrat-Light';
+}
+
+.comments{
+    display: block;
+    float: left;
+    height: 300px;
+    width: 25%;
+    text-align: left;
+    overflow-y: auto;
+    padding: 1.4rem 30px 1rem 1rem;
+    /*padding: 40px;*/
+    z-index: 2000;
+    margin-top: -100px;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
 
 }

@@ -271,3 +271,567 @@
       padding: 20px;
   }
 }
+
+@media screen and (min-width:1441px){
+
+  .fadeInUp {
+      animation-name: fadeInUp;
+      animation-duration: 2s;
+  }
+
+  body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat';
+  }
+
+  .header{
+      height: 170px;
+      background-color: #E51616;
+  }
+
+  .accueil{
+      display: block;
+      margin: auto;
+  }
+
+  .logospace{
+      display: block;
+      margin: auto;
+  }
+
+  .btn{
+      display: inline-block;
+      color: #E51616;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      margin: 20px 0 30px 0;
+      padding: 7px 10% 7px 10%;
+      border: solid #E51616 2px;
+      cursor: pointer;
+  }
+
+  .btn:hover{
+      color: white;
+      background-color: #E51616;
+      transition: .3s ease;
+  }
+
+  .disconnectbtn{
+      display: inline-block;
+      width: 15%;
+      color: #E51616;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      padding: 7px 25px 7px 25px;
+      border: solid #E51616 2px;
+  }
+
+  .disconnectbtn:hover{
+      color: white;
+      background-color: #E51616;
+      transition: .3s ease;
+  }
+
+  .disconnectdiv{
+      display: inline-block;
+      width: 100%;
+  }
+
+  .divbtn{
+      height: 50px;
+  }
+
+  input{
+      font-size: 16px;
+  }
+
+  .container{
+      text-align: center;
+      margin-top: 5%;
+  }
+
+  .container ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .title{
+      margin-bottom: 5%;
+      color: #E51616;
+      font-size: 30px;
+      font-family: 'Montserrat-UltraLight';
+  }
+
+  .titlediv{
+      text-align: center;
+  }
+
+  .profile{
+      display: block;
+      float: left;
+      height: 300px;
+      width: 25%;
+      line-height: 2rem;
+      margin-left: 4%;
+      padding: 1.4rem 1rem 1rem 1rem;
+      text-align: left;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      overflow: hidden;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
+  .profilearticle{
+      display: block;
+      float: left;
+      height: 300px;
+      width: 25%;
+      margin: 0 5% 5% 5%;
+      padding: 1.4rem 1rem 1rem 1rem;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
+  .editprofile{
+      display: block;
+      float: left;
+      height: 300px;
+      width: 25%;
+      padding: 1.4rem 30px 1rem 1rem;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      overflow: hidden;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
+  .editprofile .forminput{
+      display: inline-block;
+      height: 14px;
+      float: right;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      margin: 1px 1px 3px 10px;
+      padding: 3px 15px 3px 15px;
+      border: solid #E51616 1px;
+  }
+
+  .editprofile label{
+      float: left;
+      text-align: left;
+      width: 380px;
+  }
+
+  .formlogin{
+      margin-right: auto;
+      margin-left: auto;
+      height: 250px;
+      width: 845px;
+      text-align: center;
+      padding: 1.4rem 0 1rem 0;
+      font-family: 'Montserrat';
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
+  .formregister{
+      margin-right: auto;
+      margin-left: auto;
+      height: 350px;
+      width: 845px;
+      text-align: center;
+      padding: 1.4rem 0 1rem 0;
+      font-family: 'Montserrat';
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
+  .formdivlogin{
+      margin-right: auto;
+      margin-left: auto;
+      height: 155px;
+      width: 350px;
+      padding: 1.4rem 0 1rem 0;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
+  .formdivregister{
+      margin-right: auto;
+      margin-left: auto;
+      height: 260px;
+      width: 350px;
+      padding: 1.4rem 0 1rem 0;
+      -moz-box-shadow: 0px 1px 7px 0px #656565;
+      -webkit-box-shadow: 0px 1px 7px 0px #656565;
+      -o-box-shadow: 0px 1px 7px 0px #656565;
+      box-shadow: 0px 1px 7px 0px #656565;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+  }
+
+  .login,.password,.email{
+      display: inline-block;
+      background-color: white;
+      font-family: 'Montserrat';
+      text-decoration: none;
+      padding: 15px 25px 15px 25px;
+      border: solid #E51616 2px;
+  }
+
+  .login{
+      margin-bottom: 45px;
+  }
+
+  .password{
+      margin-bottom: 45px;
+  }
+
+  .email{
+      margin-bottom: 25px;
+  }
+
+  .footer{
+      background-color: #E51616;
+      text-align: center;
+      font-family: 'Montserrat';
+      color: white;
+      margin-top: 246px;
+      line-height: 50px;
+      height: 50px;
+      padding: 20px;
+  }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+.header{
+    height: 170px;
+    background-color: #E51616;
+}
+
+.accueil{
+    display: inline-block;
+    margin-left: 37%;
+}
+
+.logospace{
+    display: block;
+    margin: auto;
+}
+
+.btn{
+    display: inline-block;
+    color: #E51616;
+    background-color: white;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    margin: 20px 0 30px 0;
+    padding: 7px 10% 7px 10%;
+    border: solid #E51616 2px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: white;
+    background-color: #E51616;
+    transition: .3s ease;
+}
+
+.disconnectbtn{
+    display: inline-block;
+    width: 15%;
+    color: #E51616;
+    background-color: white;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    padding: 7px 25px 7px 25px;
+    border: solid #E51616 2px;
+    cursor: pointer;
+}
+
+.disconnectbtn:hover{
+    color: white;
+    background-color: #E51616;
+    transition: .3s ease;
+}
+
+.disconnectdiv{
+    display: inline-block;
+    width: 100%;
+}
+
+.divbtn{
+    height: 50px;
+}
+
+input{
+    font-size: 16px;
+}
+
+.container{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.container ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    margin-bottom: 5%;
+    color: #E51616;
+    font-size: 30px;
+    font-family: 'Montserrat-UltraLight';
+}
+
+.titlediv{
+    text-align: center;
+}
+
+.profile{
+    display: block;
+    float: left;
+    height: 300px;
+    width: 25%;
+    line-height: 2rem;
+    margin-left: 4%;
+    padding: 1.4rem 1rem 1rem 1rem;
+    text-align: left;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.profilearticle{
+    display: block;
+    float: left;
+    height: 300px;
+    width: 25%;
+    margin: 0 5% 5% 5%;
+    padding: 1.4rem 1rem 1rem 1rem;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.editprofile{
+    display: block;
+    float: left;
+    height: 300px;
+    width: 25%;
+    padding: 1.4rem 30px 1rem 1rem;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.editprofile .forminput{
+    display: inline-block;
+    height: 14px;
+    float: right;
+    background-color: white;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    margin: 1px 1px 3px 10px;
+    padding: 3px 15px 3px 15px;
+    border: solid #E51616 1px;
+}
+
+.editprofile label{
+    float: left;
+    text-align: left;
+    width: 380px;
+}
+
+.formlogin{
+    margin-right: auto;
+    margin-left: auto;
+    height: 250px;
+    width: 845px;
+    text-align: center;
+    padding: 1.4rem 0 1rem 0;
+    font-family: 'Montserrat';
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.formregister{
+    margin-right: auto;
+    margin-left: auto;
+    height: 350px;
+    width: 845px;
+    text-align: center;
+    padding: 1.4rem 0 1rem 0;
+    font-family: 'Montserrat';
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.formdivlogin{
+    margin-right: auto;
+    margin-left: auto;
+    height: 155px;
+    width: 350px;
+    padding: 1.4rem 0 1rem 0;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.formdivregister{
+    margin-right: auto;
+    margin-left: auto;
+    height: 260px;
+    width: 350px;
+    padding: 1.4rem 0 1rem 0;
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
+
+.login,.password,.email{
+    display: inline-block;
+    background-color: white;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    padding: 15px 25px 15px 25px;
+    border: solid #E51616 2px;
+}
+
+.login{
+    margin-bottom: 45px;
+}
+
+.password{
+    margin-bottom: 45px;
+}
+
+.email{
+    margin-bottom: 25px;
+}
+
+.footer{
+    background-color: #E51616;
+    text-align: center;
+    font-family: 'Montserrat';
+    color: white;
+    margin-top: 246px;
+    line-height: 50px;
+    height: 50px;
+    padding: 20px;
+}
+
+@media (max-width: 640px) {
+
+    .logospace{
+        width: 100%;
+        height: 100%;
+    }
+
+    .accueil{
+        margin: 0;
+    }
+
+    .profile{
+        display: block;
+        width: 80%;
+        height: 50%;
+        margin: 4%;
+    }
+
+    .profilearticle{
+        display: block;
+        width: 80%;
+        margin: 4%;
+    }
+
+    .editprofile{
+        display: block;
+        width: 77%;
+        height: 50%;
+        margin: 4%;
+    }
+
+    .editprofile label{
+        width: 250px;
+    }
+
+    .editprofile input{
+        width: 35%;
+    }
+
+    .editprofile .btn{
+        width: 70%;
+    }
+
+    .disconnectbtn{
+        width: 40%;
+        margin: 30px 10px 0 0;
+    }
+
+    .formlogin{
+        width: 90%;
+    }
+
+    .formdivlogin{
+        box-shadow: none;
+        width: 90%;
+    }
+
+    .formregister{
+        width: 90%;
+    }
+
+    .formdivregister{
+        box-shadow: none;
+        width: 90%;
+    }
+
+    .footer{
+        margin-top: 90px;
+    }
+}
