@@ -244,36 +244,36 @@ body{
 
 
     }
-@media (max-width: 640px){
+@media (max-width: 640px) {
 
-    .logospace{
+    .logospace {
         width: 100%;
         height: 100%;
     }
 
-    .accueil{
+    .accueil {
         margin: 0;
     }
 
-    .posts{
+    .posts {
         display: block;
         width: 80%;
         margin: 4%;
     }
 
-    .users{
+    .users {
         display: block;
         width: 80%;
         margin: 4%;
     }
 
-    .comments{
+    .comments {
         display: block;
         width: 75%;
         margin: 4%;
     }
 
-
+}
 
 .articlecomment{
     display: block;
@@ -385,6 +385,5 @@ body{
     margin-bottom: 50px;
     background-color: white;
 }
-
 
 }
