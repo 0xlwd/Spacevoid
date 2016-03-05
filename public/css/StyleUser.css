@@ -766,6 +766,7 @@ input{
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
+
     .logospace{
         width: 100%;
         height: 100%;
@@ -824,6 +825,10 @@ input{
     .formregister{
         width: 90%;
         margin-top: 15%;
+    }
+
+    .footer{
+        font-size: 1.5rem;
     }
 }
 
@@ -895,5 +900,6 @@ input{
 
     .footer{
         margin-top: 90px;
+        font-size: 1.5rem;
     }
 }

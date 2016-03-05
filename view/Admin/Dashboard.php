@@ -141,5 +141,8 @@
 
     </div>
   </div>
+  <div class="footer">
+    SpaceVoid &copy; <?= date('Y'); ?>
+  </div>
   </body>
 </html>
