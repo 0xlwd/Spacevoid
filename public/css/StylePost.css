@@ -20,510 +20,129 @@
     }
 }
 
-@media screen and (min-width:1025px) and (max-width:1440px) {
-
-    .fadeInUp {
-        animation-name: fadeInUp;
-        animation-duration: 2s;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Montserrat';
-    }
-
-    .container {
-        text-align: center;
-        margin-top: 5%;
-    }
-
-    .container ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .headerindex {
-        height: 400px;
-        background-color: #2c3e50;
-    }
-
-    .header {
-        height: 170px;
-        background-color: #2c3e50;
-    }
-
-    h4{
-      text-align: center;
-    }
-
-    .paracomments{
-        line-height: 1.7rem;
-        padding: 1%;
-        width: 960px;
-        display: block;
-        margin: auto;
-        border-left: solid 2px #2c3e50;
-    }
-
-    .paracomments:hover{
-        border-bottom: solid 2px #ffffff;
-        transition: ease .3s;
-    }
-
-    .headerbtn {
-        display: inline-block;
-        color: white;
-        font-family: 'Montserrat';
-        float: right;
-        margin: 15px 20px 0 10px;
-        text-decoration: none;
-        border: solid white 2px;
-        padding: 7px 25px 7px 25px;
-    }
-
-    .headerbtn:hover {
-        color: #2c3e50;
-        background-color: white;
-        transition: .3s ease;
-    }
-
-    .title {
-        margin-bottom: 5%;
-        color: #2c3e50;
-        font-size: 30px;
-        font-family: 'Montserrat-UltraLight';
-    }
-
-    .divbtn {
-        height: 75px;
-    }
-
-    .logospaceindex {
-        display: block;
-        margin: auto;
-        padding-top: 50px;
-    }
-
-    .logospace {
-        display: block;
-        margin: auto;
-    }
-
-    .accueil {
-        display: block;
-        margin: auto;
-    }
-
-    .post {
-        margin-right: auto;
-        margin-left: auto;
-        width: 945px;
-        text-align: center;
-        padding: 1.4rem 0 1rem 0;
-        font-family: 'Montserrat';
-        -moz-box-shadow: 0px 1px 7px 0px #656565;
-        -webkit-box-shadow: 0px 1px 7px 0px #656565;
-        -o-box-shadow: 0px 1px 7px 0px #656565;
-        box-shadow: 0px 1px 7px 0px #656565;
-        filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-    }
-
-    .post img {
-        width: 900px;
-        height: 506px;
-        display: block;
-        margin-left: 22px;
-    }
-
-    .post:first-of-type {
-        margin-top: -40px;
-        background-color: white;
-    }
-
-    .post:not(:first-of-type) {
-        margin-top: 40px;
-    }
-
-    .contentpostindex {
-        padding: 10px 50px 20px 50px;
-        width: 89%;
-        font-weight: 300;
-        font-family: 'Montserrat-UltraLight';
-
-    }
-
-    .contentpost {
-        padding: 10px 50px 20px 50px;
-        width: 90%;
-        text-align: justify;
-        line-height: 40px;
-    }
-
-    .formdiv {
-        display: inline-block;
-        height: 500px;
-        width: 75%;
-        line-height: 90px;
-        padding: 1.4rem 1rem 1rem 1rem;
-        -moz-box-shadow: 0px 1px 2px 0px #656565;
-        -webkit-box-shadow: 0px 1px 2px 0px #656565;
-        -o-box-shadow: 0px 1px 2px 0px #656565;
-        box-shadow: 0px 1px 2px 0px #656565;
-    }
-
-    .textpost {
-        max-height: 200px;
-        max-width: 75%;
-        min-height: 200px;
-        min-width: 75%;
-        text-align: center;
-        font-family: 'Montserrat';
-        padding: 10px 0 0 0;
-        border: solid #2c3e50 2px;
-    }
-
-    .readpostbtn {
-        margin: auto;
-        color: #2c3e50;
-        border: solid #2c3e50 2px;
-        text-decoration: none;
-        padding: 7px 40px 7px 40px;
-    }
-
-    .readpostbtn:hover {
-        color: white;
-        background-color: #2c3e50;
-        transition: .3s ease;
-    }
-
-    .titlepostindex {
-        padding: 10px 30px 0 45px;
-        width: 89%;
-    }
-
-    .titlepost {
-        padding: 10px 0 10px 0;
-        width: 75%;
-        text-align: center;
-        font-family: 'Montserrat';
-        border: solid #2c3e50 2px;
-    }
-
-    .postlinks {
-        text-decoration: none;
-        color: #404040;
-    }
-
-    .postlinks:hover {
-        color: #000051;
-        transition: .3s ease;
-    }
-
-    .btn {
-        display: inline-block;
-        color: #2c3e50;
-        background-color: white;
-        font-family: 'Montserrat';
-        text-decoration: none;
-        margin: 29px 0 30px 0;
-        padding: 7px 10% 7px 10%;
-        border: solid #2c3e50 2px;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        color: white;
-        background-color: #2c3e50;
-        transition: .3s ease;
-    }
-
-    .filebtn {
-        display: none;
-
-    }
-
-    .filebtnlabel {
-        width: 25%;
-        color: #2c3e50;
-        background-color: white;
-        font-family: 'Montserrat';
-        text-decoration: none;
-        padding: 7px 25px 7px 25px;
-        border: solid #2c3e50 2px;
-    }
-
-    .filebtnlabel:hover {
-        color: white;
-        background-color: #2c3e50;
-        transition: .3s ease;
-        cursor: pointer;
-    }
-
-    .footer {
-        background-color: #2c3e50;
-        text-align: center;
-        font-family: 'Montserrat';
-        color: white;
-        margin-top: 100px;
-        line-height: 100px;
-        height: 100px;
-        padding: 20px;
-    }
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 2s;
 }
 
-@media screen and (min-width:1441px){
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
 
-    .fadeInUp {
-        animation-name: fadeInUp;
-        animation-duration: 2s;
-    }
+.container {
+    text-align: center;
+    margin-top: 5%;
+}
 
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Montserrat';
-    }
+.container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-    .container {
-        text-align: center;
-        margin-top: 5%;
-    }
+.headerindex {
+    height: 400px;
+    background-color: #2c3e50;
+}
 
-    .container ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+.header {
+    height: 170px;
+    background-color: #2c3e50;
+}
 
-    .headerindex {
-        height: 400px;
-        background-color: #2c3e50;
-    }
+h4{
+    text-align: center;
+}
 
-    .header {
-        height: 170px;
-        background-color: #2c3e50;
-    }
+.paracomments{
+    line-height: 1.7rem;
+    padding: 1%;
+    width: 90%;
+    display: block;
+    margin: auto;
+    border-left: solid 2px #2c3e50;
+}
 
-    h4{
-      text-align: center;
-    }
+.paracomments:hover{
+    border-bottom: solid 2px #ffffff;
+    transition: ease .3s;
+}
 
-    .paracomments{
-        line-height: 1.7rem;
-        padding: 1%;
-        width: 960px;
-        display: block;
-        margin: auto;
-        border-left: solid 2px #2c3e50;
-    }
+.headerbtn {
+    display: inline-block;
+    color: white;
+    font-family: 'Montserrat';
+    float: right;
+    margin: 15px 20px 0 10px;
+    text-decoration: none;
+    border: solid white 2px;
+    padding: 7px 25px 7px 25px;
+}
 
-    .paracomments:hover{
-        border-bottom: solid 2px #ffffff;
-        transition: ease .3s;
-    }
+.headerbtn:hover {
+    color: #2c3e50;
+    background-color: white;
+    transition: .3s ease;
+}
 
-    .headerbtn {
-        display: inline-block;
-        color: white;
-        font-family: 'Montserrat';
-        float: right;
-        margin: 15px 20px 0 10px;
-        text-decoration: none;
-        border: solid white 2px;
-        padding: 7px 25px 7px 25px;
-    }
+.title {
+    margin-bottom: 5%;
+    color: #2c3e50;
+    font-size: 30px;
+    font-family: 'Montserrat-UltraLight';
+}
 
-    .headerbtn:hover {
-        color: #2c3e50;
-        background-color: white;
-        transition: .3s ease;
-    }
+.divbtn {
+    height: 75px;
+}
 
-    .title {
-        margin-bottom: 5%;
-        color: #2c3e50;
-        font-size: 30px;
-        font-family: 'Montserrat-UltraLight';
-    }
+.logospaceindex {
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+}
 
-    .divbtn {
-        height: 75px;
-    }
+.logospace {
+    display: block;
+    margin: auto;
+}
 
-    .logospaceindex {
-        display: block;
-        margin: auto;
-        padding-top: 50px;
-    }
+.accueil {
+    display: block;
+    margin: auto;
+}
 
-    .logospace {
-        display: block;
-        margin: auto;
-    }
+.post {
+    margin-right: auto;
+    margin-left: auto;
+    width: 945px;
+    text-align: center;
+    padding: 1.4rem 0 1rem 0;
+    font-family: 'Montserrat';
+    -moz-box-shadow: 0px 1px 7px 0px #656565;
+    -webkit-box-shadow: 0px 1px 7px 0px #656565;
+    -o-box-shadow: 0px 1px 7px 0px #656565;
+    box-shadow: 0px 1px 7px 0px #656565;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+}
 
-    .accueil {
-        display: block;
-        margin: auto;
-    }
+.post:first-of-type {
+    margin-top: -45px;
+    background-color: white;
+}
 
-    .post {
-        margin-right: auto;
-        margin-left: auto;
-        width: 945px;
-        text-align: center;
-        padding: 1.4rem 0 1rem 0;
-        font-family: 'Montserrat';
-        -moz-box-shadow: 0px 1px 7px 0px #656565;
-        -webkit-box-shadow: 0px 1px 7px 0px #656565;
-        -o-box-shadow: 0px 1px 7px 0px #656565;
-        box-shadow: 0px 1px 7px 0px #656565;
-        filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
-    }
+.post:not(:first-of-type) {
+    margin-top: 40px;
+}
 
-    .post img {
-        width: 900px;
-        height: 506px;
-        display: block;
-        margin-left: 22px;
-    }
+.contentpostindex {
+    padding: 10px 50px 20px 50px;
+    width: 89%;
+    font-weight: 300;
+    font-family: 'Montserrat-UltraLight';
 
-    .post:first-of-type {
-        margin-top: -40px;
-        background-color: white;
-    }
-
-    .post:not(:first-of-type) {
-        margin-top: 40px;
-    }
-
-    .contentpostindex {
-        padding: 10px 50px 20px 50px;
-        width: 89%;
-        font-weight: 300;
-        font-family: 'Montserrat-UltraLight';
-
-    }
-
-    .contentpost {
-        padding: 10px 50px 20px 50px;
-        width: 90%;
-        text-align: justify;
-        line-height: 40px;
-    }
-
-    .formdiv {
-        display: inline-block;
-        height: 500px;
-        width: 75%;
-        line-height: 90px;
-        padding: 1.4rem 1rem 1rem 1rem;
-        -moz-box-shadow: 0px 1px 2px 0px #656565;
-        -webkit-box-shadow: 0px 1px 2px 0px #656565;
-        -o-box-shadow: 0px 1px 2px 0px #656565;
-        box-shadow: 0px 1px 2px 0px #656565;
-    }
-
-    .textpost {
-        max-height: 200px;
-        max-width: 75%;
-        min-height: 200px;
-        min-width: 75%;
-        text-align: center;
-        font-family: 'Montserrat';
-        padding: 10px 0 0 0;
-        border: solid #2c3e50 2px;
-    }
-
-    .readpostbtn {
-        margin: auto;
-        color: #2c3e50;
-        border: solid #2c3e50 2px;
-        text-decoration: none;
-        padding: 7px 40px 7px 40px;
-    }
-
-    .readpostbtn:hover {
-        color: white;
-        background-color: #2c3e50;
-        transition: .3s ease;
-    }
-
-    .titlepostindex {
-        padding: 10px 30px 0 45px;
-        width: 89%;
-    }
-
-    .titlepost {
-        padding: 10px 0 10px 0;
-        width: 75%;
-        text-align: center;
-        font-family: 'Montserrat';
-        border: solid #2c3e50 2px;
-    }
-
-    .postlinks {
-        text-decoration: none;
-        color: #404040;
-    }
-
-    .postlinks:hover {
-        color: #000051;
-        transition: .3s ease;
-    }
-
-    .btn {
-        display: inline-block;
-        color: #2c3e50;
-        background-color: white;
-        font-family: 'Montserrat';
-        text-decoration: none;
-        margin: 29px 0 30px 0;
-        padding: 7px 10% 7px 10%;
-        border: solid #2c3e50 2px;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        color: white;
-        background-color: #2c3e50;
-        transition: .3s ease;
-    }
-
-    .filebtn {
-        display: none;
-
-    }
-
-    .filebtnlabel {
-        width: 25%;
-        color: #2c3e50;
-        background-color: white;
-        font-family: 'Montserrat';
-        text-decoration: none;
-        padding: 7px 25px 7px 25px;
-        border: solid #2c3e50 2px;
-    }
-
-    .filebtnlabel:hover {
-        color: white;
-        background-color: #2c3e50;
-        transition: .3s ease;
-        cursor: pointer;
-    }
-
-    .footer {
-        background-color: #2c3e50;
-        text-align: center;
-        font-family: 'Montserrat';
-        color: white;
-        margin-top: 100px;
-        line-height: 100px;
-        height: 100px;
-        padding: 20px;
-    }
 }
 
 .contentpost{
@@ -558,9 +177,9 @@
 }
 
 .textpost{
-    max-height: 200px;
+    max-height: 325px;
     max-width: 75%;
-    min-height: 200px;
+    min-height: 325px;
     min-width: 75%;
     text-align: center;
     font-family: 'Montserrat';
@@ -668,7 +287,599 @@
     padding: 20px;
 }
 
-@media (max-width: 640px) {
+@media screen and (min-width:1441px){
+
+    .fadeInUp {
+        animation-name: fadeInUp;
+        animation-duration: 2s;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat';
+    }
+
+    .container {
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .container ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .headerindex {
+        height: 400px;
+        background-color: #2c3e50;
+    }
+
+    .header {
+        height: 170px;
+        background-color: #2c3e50;
+    }
+
+    h4{
+        text-align: center;
+    }
+
+    .paracomments{
+        line-height: 1.7rem;
+        padding: 1%;
+        width: 960px;
+        display: block;
+        margin: auto;
+        border-left: solid 2px #2c3e50;
+    }
+
+    .paracomments:hover{
+        border-bottom: solid 2px #ffffff;
+        transition: ease .3s;
+    }
+
+    .headerbtn {
+        display: inline-block;
+        color: white;
+        font-family: 'Montserrat';
+        float: right;
+        margin: 15px 20px 0 10px;
+        text-decoration: none;
+        border: solid white 2px;
+        padding: 7px 25px 7px 25px;
+    }
+
+    .headerbtn:hover {
+        color: #2c3e50;
+        background-color: white;
+        transition: .3s ease;
+    }
+
+    .title {
+        margin-bottom: 5%;
+        color: #2c3e50;
+        font-size: 30px;
+        font-family: 'Montserrat-UltraLight';
+    }
+
+    .divbtn {
+        height: 75px;
+    }
+
+    .logospaceindex {
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    .logospace {
+        display: block;
+        margin: auto;
+    }
+
+    .accueil {
+        display: block;
+        margin: auto;
+    }
+
+    .post {
+        margin-right: auto;
+        margin-left: auto;
+        width: 945px;
+        text-align: center;
+        padding: 1.4rem 0 1rem 0;
+        font-family: 'Montserrat';
+        -moz-box-shadow: 0px 1px 7px 0px #656565;
+        -webkit-box-shadow: 0px 1px 7px 0px #656565;
+        -o-box-shadow: 0px 1px 7px 0px #656565;
+        box-shadow: 0px 1px 7px 0px #656565;
+        filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+    }
+
+    .post img {
+        width: 900px;
+        height: 506px;
+        display: block;
+        margin-left: 22px;
+    }
+
+    .post:first-of-type {
+        margin-top: -40px;
+        background-color: white;
+    }
+
+    .post:not(:first-of-type) {
+        margin-top: 40px;
+    }
+
+    .contentpostindex {
+        padding: 10px 50px 20px 50px;
+        width: 89%;
+        font-weight: 300;
+        font-family: 'Montserrat-UltraLight';
+
+    }
+
+    .contentpost {
+        padding: 10px 50px 20px 50px;
+        width: 90%;
+        text-align: justify;
+        line-height: 40px;
+    }
+
+    .formdiv {
+        display: inline-block;
+        height: 500px;
+        width: 75%;
+        line-height: 90px;
+        padding: 1.4rem 1rem 1rem 1rem;
+        -moz-box-shadow: 0px 1px 2px 0px #656565;
+        -webkit-box-shadow: 0px 1px 2px 0px #656565;
+        -o-box-shadow: 0px 1px 2px 0px #656565;
+        box-shadow: 0px 1px 2px 0px #656565;
+    }
+
+    .textpost {
+        max-height: 200px;
+        max-width: 75%;
+        min-height: 200px;
+        min-width: 75%;
+        text-align: center;
+        font-family: 'Montserrat';
+        padding: 10px 0 0 0;
+        border: solid #2c3e50 2px;
+    }
+
+    .readpostbtn {
+        margin: auto;
+        color: #2c3e50;
+        border: solid #2c3e50 2px;
+        text-decoration: none;
+        padding: 7px 40px 7px 40px;
+    }
+
+    .readpostbtn:hover {
+        color: white;
+        background-color: #2c3e50;
+        transition: .3s ease;
+    }
+
+    .titlepostindex {
+        padding: 10px 30px 0 45px;
+        width: 89%;
+    }
+
+    .titlepost {
+        padding: 10px 0 10px 0;
+        width: 75%;
+        text-align: center;
+        font-family: 'Montserrat';
+        border: solid #2c3e50 2px;
+    }
+
+    .postlinks {
+        text-decoration: none;
+        color: #404040;
+    }
+
+    .postlinks:hover {
+        color: #000051;
+        transition: .3s ease;
+    }
+
+    .btn {
+        display: inline-block;
+        color: #2c3e50;
+        background-color: white;
+        font-family: 'Montserrat';
+        text-decoration: none;
+        margin: 29px 0 30px 0;
+        padding: 7px 10% 7px 10%;
+        border: solid #2c3e50 2px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        color: white;
+        background-color: #2c3e50;
+        transition: .3s ease;
+    }
+
+    .filebtn {
+        display: none;
+
+    }
+
+    .filebtnlabel {
+        width: 25%;
+        color: #2c3e50;
+        background-color: white;
+        font-family: 'Montserrat';
+        text-decoration: none;
+        padding: 7px 25px 7px 25px;
+        border: solid #2c3e50 2px;
+    }
+
+    .filebtnlabel:hover {
+        color: white;
+        background-color: #2c3e50;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .footer {
+        background-color: #2c3e50;
+        text-align: center;
+        font-family: 'Montserrat';
+        color: white;
+        margin-top: 100px;
+        line-height: 100px;
+        height: 100px;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width:1440px) {
+
+    .fadeInUp {
+        animation-name: fadeInUp;
+        animation-duration: 2s;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat';
+    }
+
+    .container {
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .container ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .headerindex {
+        height: 400px;
+        background-color: #2c3e50;
+    }
+
+    .header {
+        height: 170px;
+        background-color: #2c3e50;
+    }
+
+    h4{
+        text-align: center;
+    }
+
+    .paracomments{
+        line-height: 1.7rem;
+        padding: 1%;
+        width: 960px;
+        display: block;
+        margin: auto;
+        border-left: solid 2px #2c3e50;
+    }
+
+    .paracomments:hover{
+        border-bottom: solid 2px #ffffff;
+        transition: ease .3s;
+    }
+
+    .headerbtn {
+        display: inline-block;
+        color: white;
+        font-family: 'Montserrat';
+        float: right;
+        margin: 15px 20px 0 10px;
+        text-decoration: none;
+        border: solid white 2px;
+        padding: 7px 25px 7px 25px;
+    }
+
+    .headerbtn:hover {
+        color: #2c3e50;
+        background-color: white;
+        transition: .3s ease;
+    }
+
+    .title {
+        margin-bottom: 5%;
+        color: #2c3e50;
+        font-size: 30px;
+        font-family: 'Montserrat-UltraLight';
+    }
+
+    .divbtn {
+        height: 75px;
+    }
+
+    .logospaceindex {
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    .logospace {
+        display: block;
+        margin: auto;
+    }
+
+    .accueil {
+        display: block;
+        margin: auto;
+    }
+
+    .post {
+        margin-right: auto;
+        margin-left: auto;
+        width: 945px;
+        text-align: center;
+        padding: 1.4rem 0 1rem 0;
+        font-family: 'Montserrat';
+        -moz-box-shadow: 0px 1px 7px 0px #656565;
+        -webkit-box-shadow: 0px 1px 7px 0px #656565;
+        -o-box-shadow: 0px 1px 7px 0px #656565;
+        box-shadow: 0px 1px 7px 0px #656565;
+        filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=7);
+    }
+
+    .post img {
+        width: 900px;
+        height: 506px;
+        display: block;
+        margin-left: 22px;
+    }
+
+    .post:first-of-type {
+        margin-top: -40px;
+        background-color: white;
+    }
+
+    .post:not(:first-of-type) {
+        margin-top: 40px;
+    }
+
+    .contentpostindex {
+        padding: 10px 50px 20px 50px;
+        width: 89%;
+        font-weight: 300;
+        font-family: 'Montserrat-UltraLight';
+
+    }
+
+    .contentpost {
+        padding: 10px 50px 20px 50px;
+        width: 90%;
+        text-align: justify;
+        line-height: 40px;
+    }
+
+    .formdiv {
+        display: inline-block;
+        height: 500px;
+        width: 75%;
+        line-height: 90px;
+        padding: 1.4rem 1rem 1rem 1rem;
+        -moz-box-shadow: 0px 1px 2px 0px #656565;
+        -webkit-box-shadow: 0px 1px 2px 0px #656565;
+        -o-box-shadow: 0px 1px 2px 0px #656565;
+        box-shadow: 0px 1px 2px 0px #656565;
+    }
+
+    .textpost {
+        max-height: 200px;
+        max-width: 75%;
+        min-height: 200px;
+        min-width: 75%;
+        text-align: center;
+        font-family: 'Montserrat';
+        padding: 10px 0 0 0;
+        border: solid #2c3e50 2px;
+    }
+
+    .readpostbtn {
+        margin: auto;
+        color: #2c3e50;
+        border: solid #2c3e50 2px;
+        text-decoration: none;
+        padding: 7px 40px 7px 40px;
+    }
+
+    .readpostbtn:hover {
+        color: white;
+        background-color: #2c3e50;
+        transition: .3s ease;
+    }
+
+    .titlepostindex {
+        padding: 10px 30px 0 45px;
+        width: 89%;
+    }
+
+    .titlepost {
+        padding: 10px 0 10px 0;
+        width: 75%;
+        text-align: center;
+        font-family: 'Montserrat';
+        border: solid #2c3e50 2px;
+    }
+
+    .postlinks {
+        text-decoration: none;
+        color: #404040;
+    }
+
+    .postlinks:hover {
+        color: #000051;
+        transition: .3s ease;
+    }
+
+    .btn {
+        display: inline-block;
+        color: #2c3e50;
+        background-color: white;
+        font-family: 'Montserrat';
+        text-decoration: none;
+        margin: 29px 0 30px 0;
+        padding: 7px 10% 7px 10%;
+        border: solid #2c3e50 2px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        color: white;
+        background-color: #2c3e50;
+        transition: .3s ease;
+    }
+
+    .filebtn {
+        display: none;
+
+    }
+
+    .filebtnlabel {
+        width: 25%;
+        color: #2c3e50;
+        background-color: white;
+        font-family: 'Montserrat';
+        text-decoration: none;
+        padding: 7px 25px 7px 25px;
+        border: solid #2c3e50 2px;
+    }
+
+    .filebtnlabel:hover {
+        color: white;
+        background-color: #2c3e50;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .footer {
+        background-color: #2c3e50;
+        text-align: center;
+        font-family: 'Montserrat';
+        color: white;
+        margin-top: 100px;
+        line-height: 100px;
+        height: 100px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .logospace{
+        width: 55%;
+        height: 100%;
+    }
+
+    .logospaceindex{
+        width: 75%;
+        height: 100%;
+    }
+
+    .accueil{
+        margin: 0;
+    }
+
+    .post{
+        width: 90%;
+    }
+
+    .post img{
+        width: 90%;
+        height: 90%;
+    }
+
+    .contentpost{
+        padding: 5px 25px 10px 25px;
+        width: 92.5%;
+        line-height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .formdiv{
+        width: 70%;
+        font-size: 1.2rem;
+        line-height: 60px;
+    }
+
+    .filebtnlabel{
+        display: inline-block;
+        line-height: 1rem;
+        font-size: 1.2rem;
+        margin-top: 8px;
+        width: 70%;
+    }
+
+    .postingdate {
+        display: block;
+        font-size: 1.3rem;
+        margin-top: 20px;
+        line-height: 1.5rem;
+    }
+
+    .paracomments{
+        font-size: 1.3rem;
+    }
+
+    .divbtn{
+        text-align: center;
+    }
+
+    .headerbtn{
+        margin: 10px 1rem 0 0;
+        font-size: 2rem;
+    }
+
+    .btn{
+        font-size: 1.5rem;
+        padding: 7px 10% 7px 10%;
+    }
+
+    .readpostbtn{
+        font-size: 1.5rem;
+    }
+
+    .titlepostindex{
+        width: inherit;
+        padding-left: 15px;
+    }
+
+    .contentpostindex{
+        width: inherit;
+        padding-left: 15px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
 
     .logospace{
         width: 100%;
@@ -705,10 +916,10 @@
     }
 
     .filebtnlabel{
-        display: block;
-        line-height: 1.5rem;
-        margin-top: 50px;
-        width: 78%;
+        display: inline-block;
+        line-height: 1rem;
+        margin-top: 8px;
+        width: 70%;
     }
 
     .postingdate {
