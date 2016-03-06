@@ -442,11 +442,19 @@ a:hover{
     }
 
     .container{
-        width: 80%;
+        width: 75%;
     }
 
     th{
         font-size: 1.3rem;
+    }
+
+    .posts th:nth-child(2){
+        display: none;
+    }
+
+    .posts td:nth-child(2){
+        display: none;
     }
 
     .users th:nth-child(1){
@@ -466,7 +474,7 @@ a:hover{
     }
 
     .users th:nth-child(7){
-        padding: 3px;
+        display: none;
     }
 
     .users th:nth-child(8){
@@ -478,7 +486,11 @@ a:hover{
     }
 
     .users td:nth-child(2){
-        display: none;
+         display: none;
+     }
+
+    .users td:nth-child(3){
+        padding: 0;
     }
 
     .users td:nth-child(4){
@@ -489,11 +501,35 @@ a:hover{
         display: none;
     }
 
+    .users td:nth-child(6){
+        padding: 0;
+    }
+
     .users td:nth-child(7){
-        padding: 2px;
+        display: none;
     }
 
     .users td:nth-child(8) {
+        display: none;
+    }
+
+    .users td:nth-child(9) {
+        padding: 1%;
+    }
+
+    .users .action-btn{
+        padding: 10% 1% 10% 1%;
+    }
+
+    .comments th:nth-child(2) {
+        display: none;
+    }
+
+    .comments td:nth-child(1) {
+        padding: 77px;
+    }
+
+    .comments td:nth-child(2) {
         display: none;
     }
 
