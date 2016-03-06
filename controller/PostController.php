@@ -55,12 +55,12 @@ class PostController {
             if(isset($_POST['title']) && isset($_POST['content'])){
               if(is_uploaded_file($_FILES['post_cover']['tmp_name'])) {
                 $coverImage = App::SaveImage();
-                $posts->UpdatePost($post['id'], $_POST['title'], $_POST['content'], $coverImage);
+                $posts->UpdatePost($post['id'], htmlentities($_POST['title']), $_POST['content'], $coverImage);
                 echo json_encode(['success' => 'Post updated', 'New image' => true, 'article id' => $post['id']]);
                 die();
               } else {
                 $coverImage = $post['post_cover'];
-                $posts->UpdatePost($post['id'], $_POST['title'], $_POST['content'], $coverImage);
+                $posts->UpdatePost($post['id'], htmlentities($_POST['title']), $_POST['content'], $coverImage);
                 echo json_encode(['success' => 'Post updated', 'New image' => false, 'article id' => $post['id']]);
                 die();
               }
@@ -104,7 +104,7 @@ class PostController {
 
           $coverImage = App::SaveImage();
           $posts = new PostModel();
-          $posts->CreatePost($_POST['title'], $_POST['content'], $_SESSION['user_id'], $coverImage);
+          $posts->CreatePost(htmlentities($_POST['title']), $_POST['content'], $_SESSION['user_id'], $coverImage);
           echo json_encode(['success' => true, 'message' => 'Votre article a bien été enregistré']);
 
         } else {
@@ -138,7 +138,7 @@ class PostController {
     if(UserController::IsUserConnected()){
       if($_SESSION['user_id'] == $post['user_related_id'] || $role == 'superadmin'){
         $post = $posts->DeletePost($postID);
-        header('location : ../../profile');
+        header('Location: ../../');
       } else {
         echo App::error('property');
       }
@@ -152,7 +152,7 @@ class PostController {
 
     $comments = new CommentModel();
     if(!empty($_POST['content']) && !empty($_POST['post_id']) && !empty($_POST['user_id'])){
-      $comment = $comments->CreateComment($_POST['content'], $_POST['post_id'], $_POST['user_id']);
+      $comment = $comments->CreateComment(htmlentities($_POST['content']), $_POST['post_id'], $_POST['user_id']);
     } else {
       echo App::Error(400);
     }
@@ -163,6 +163,7 @@ class PostController {
 
     $comment = new CommentModel();
     $comments = $comment->DeleteComment($id);
+    header('Location: ../../dashboard');
 
   }
 

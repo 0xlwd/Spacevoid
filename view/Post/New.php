@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, minimum-scale=0.20, initial-scale=1.0">
     <title><?= $data['title'] ?></title>
     <link href="<?= App::css("StylePost");?>" rel="stylesheet">
-    <link href="<?= App::css("yellow-text-default") ?>" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="<?= App::css("jquery.notebook") ?>" rel="stylesheet">
   </head>
   <body>
   <div class="header">
@@ -19,7 +20,9 @@
       <span class="errors"></span>
       <form method="post" id="newPost" enctype="multipart/form-data">
         <input type="text" name="title" class="titlepost" id="title" placeholder="Titre"><br>
-        <textarea name="content" rows="8" cols="40" class="textpost" id="content" placeholder="Contenu de l'article"></textarea><br>
+        <div id="contenu" class="textpost">
+
+        </div>
         <label for="file" class="filebtnlabel">Choisissez une image de couverture</label>
         <input type="file" name="post_cover" class="filebtn" size="30" id="file"><br>
         <span>Date : <b><?= date("d.m.Y") ?></b></span><br>
@@ -32,13 +35,7 @@
   </div>
   <script src="<?= App::js("jquery-2.2.0.min") ?>"></script>
   <script src="<?= App::js("Post") ?>"></script>
-  <script src="<?= App::js('yellow-text.min') ?>"></script>
-  <script type="text/javascript">
-  $(document).ready(function(){
-    $("#content").YellowText({
-
-    });
-  });
-  </script>
+  <script src="<?= App::js("Editor") ?>"></script>
+  <script src="<?= App::js('jquery.notebook') ?>"></script>
   </body>
 </html>

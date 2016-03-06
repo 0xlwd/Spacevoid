@@ -1,10 +1,12 @@
 $(function(){
 
+
+
     $('#newPost').submit(function(){
 
       var form = new FormData();
       form.append("title", $('#title').val());
-      form.append("content", $('#content').val());
+      form.append("content", $('#contenu p').text());
       form.append("post_cover", document.getElementById('file').files[0]);
       $.ajax({
         url : '../../post/new',

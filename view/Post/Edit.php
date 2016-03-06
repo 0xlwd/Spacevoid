@@ -15,14 +15,14 @@
       <h1 class="fadeInUp">Modifier l'article</h1>
     </div>
     <div class="formdiv">
-    <form method="post" action="../../post/edit/<?= $data['posts']['id'] ?>" enctype="multipart/form-data">
-      <input type="text" name="title" class="titlepost" value=" <?= $data['posts']['title'] ?> "><br>
-      <textarea name="content" class="textpost" rows="40" cols="100">
-        <?= utf8_encode($data['posts']['content']) ?>
-      </textarea><br>
-      <input type="file" name="post_cover" class="filebtn" size="30">
+    <form method="post" action="../../post/edit/<?= $data['posts']['id'] ?>" data-postid="<?= $data['posts']['id'] ?>" enctype="multipart/form-data" id="editPost">
+      <input type="text" name="title" class="titlepost" value=" <?= $data['posts']['title'] ?> " id="title"><br>
+      <textarea name="content" class="textpost" rows="40" cols="100" id="content"><?= $data['posts']['content'] ?></textarea><br>
+      <label for="file" class="filebtnlabel">Choisissez une image de couverture</label>
+      <input type="file" name="post_cover" class="filebtn" size="30" id="file"><br>
       <span class="postingdate">Date de publication : <b><?= $data['posts']['post_date'] ?></b></span><br>
-      <a href="../../public/index.php"><input type="submit" name="name" class="btn" value="Envoyer"></a>
+      <input type="submit" name="name" class="btn" value="Envoyer">
+    </form>
     </div>
   </div>
   <div class="footer">

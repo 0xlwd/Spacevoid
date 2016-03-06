@@ -110,7 +110,7 @@ class UserController {
         }
 
         $user = new UserModel();
-        $userinfos = $user->UpdateUser($_SESSION['user_id'], $_POST['login'], $password, $_POST['mail'], $_POST['description'], $_POST['firstname'], $_POST['lastname']);
+        $userinfos = $user->UpdateUser($_SESSION['user_id'], htmlentities($_POST['login']), $password, htmlentities($_POST['mail']), htmlentities($_POST['description']), htmlentities($_POST['firstname']), htmlentities($_POST['lastname']));
 
       }
       $user = new UserModel();
@@ -158,7 +158,7 @@ class UserController {
       if($dataOk){
         $password = App::PasswordHash($_POST['password']);
         $user = new UserModel();
-        $user->CreateUser($_POST['login'], $password, $_POST['mail'], '', '', '', 'user', date('d.m.Y'));
+        $user->CreateUser(htmlentities($_POST['login']), $password, htmlentities($_POST['mail']), '', '', '', 'user', date('d.m.Y'));
         echo json_encode(['success' => 'User registered', 'code' => 200]);
       } else {
         http_response_code(400);
@@ -180,6 +180,7 @@ class UserController {
 
     $user = new UserModel();
     $users = $user->DeleteUser($id);
+    header('Location: dashboard');
 
   }
 
