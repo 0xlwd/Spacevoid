@@ -79,7 +79,6 @@ class UserController {
       echo json_encode(['error' => 'User not connected', 'code' => 401]);
     }
 
-
   }
 
   public function UserLoginForm() {
